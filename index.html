@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Weather Index Insurance Educational Materials">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>WIIEDU - Weather Index </title>
+
+    <!-- Bootstrap -->
+    <!-- see end of page -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link href="style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body role="document">
+
+    <!-- Fixed navbar -->
+    <nav id="navbar" class="navbar navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="http://iri.columbia.edu">
+	    	<img src="https://iri.columbia.edu/wp-content/themes/iri/assets/images/logo-iri-large.png" alt="International Research Institute for Climate and Society" class="branding">
+	      </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container" role="main">
+
+      <div class="page-header">
+        <h1></h1>
+        <h3 class="description"></h3>
+        <p class="pdf"></p>
+      </div>
+      <iframe id='material_contents' frameborder=0;></iframe>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/assets/js/docs.min.js"></script> -->
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <!-- <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script> -->
+    <script src="materials.json"></script>
+    <script type="text/javascript">
+    	var getUrlParameter = function getUrlParameter(sParam) {
+    		var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+        		sURLVariables = sPageURL.split('&'),
+        		sParameterName,
+        		i;
+
+    		for (i = 0; i < sURLVariables.length; i++) {
+        		sParameterName = sURLVariables[i].split('=');
+
+        		if (sParameterName[0] === sParam) {
+            		return sParameterName[1] === undefined ? true : sParameterName[1];
+        		}
+    		}
+		};
+
+    	$( document ).ready(function() {
+    	
+    		var m = getUrlParameter('m');
+    		var project = materials.projects[0];
+			if (m != undefined) {
+				// Get the project this references
+				var project;
+				$.each(materials.projects, function() {
+					if (this.id == m) {
+						project = this;
+						return false;
+					}
+				});
+				
+			}
+			
+			if (project != undefined)  {
+				$( '#material_contents' ).attr( 'src', project.loc);
+				$( 'div.page-header h1' ).html(project.name);
+				$( 'div.page-header p.pdf' ).html('<a href="'+project.document+'">Load PDF</a>');
+				$( 'div.page-header h3' ).html(project.description);
+			}
+			
+    		// var materials = materials.json
+//     		$.each(materials.projects, function(i) {
+//     			var project = this;
+//     			$( '#materials_menu' ).append("<li><a id='"+this.id+"'>"+this.name+"</a></li>");
+//     			$( '#'+this.id ).click(function() {
+//     				$( '#material_contents' ).attr( 'src', project.loc);
+//     				$( 'div.page-header h1' ).html(project.name);
+//     			});
+//     		});
+    	});
+    </script>
+  </body>
+</html>
+
+

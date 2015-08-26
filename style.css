@@ -1,0 +1,45 @@
+body {
+    padding-top: 120px;
+    padding-bottom: 30px;
+}
+
+img.branding {
+    height: 75px;
+}
+
+.navbar-brand {
+    height: auto;
+    color: white;
+}
+
+.navbar-nav {
+    float: right;
+}
+
+.navbar-nav>li>a {
+  color: white;
+}
+.nav>li>a:hover {
+  background-color: transparent;
+}
+
+.jumbotron {
+    padding-top: 28px;
+}
+
+#material_contents {
+	width: 100%;
+	height: 2100px;
+	frameborder: 0;
+	}
+	
+#navbar {
+    background: rgb(27,66,152); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(27,66,152,1) 0%, rgba(18,44,101,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(27,66,152,1)), color-stop(100%,rgba(18,44,101,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(27,66,152,1) 0%,rgba(18,44,101,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(27,66,152,1) 0%,rgba(18,44,101,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(27,66,152,1) 0%,rgba(18,44,101,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(27,66,152,1) 0%,rgba(18,44,101,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1b4298', endColorstr='#122c65',GradientType=0 
+); /* IE6-9 */

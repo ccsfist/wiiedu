@@ -1,0 +1,526 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>2. Checkpoint: Designing an Initial Weather Index By Hand &mdash; Index Insurance Sample Educational Tools 2.0.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '2.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="Index Insurance Sample Educational Tools 2.0.0 documentation" href="../index_updated_educationalMat.html" />
+    <link rel="next" title="3. Checkpoint Answer Key: Setting Triggers and Exits" href="conceptsbehindindexdesignanskey_en.html" />
+    <link rel="prev" title="1. Concepts Behind Index Design" href="conceptsbehindindexdesign_en_Web.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="conceptsbehindindexdesignanskey_en.html" title="3. Checkpoint Answer Key: Setting Triggers and Exits"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="conceptsbehindindexdesign_en_Web.html" title="1. Concepts Behind Index Design"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index_updated_educationalMat.html">updated_educationalMat</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="checkpoint-designing-an-initial-weather-index-by-hand">
+<h1>2. Checkpoint: Designing an Initial Weather Index By Hand</h1>
+<div class="section" id="topic-designing-an-initial-weather-index-by-hand">
+<h2>2.1. Topic: Designing an Initial Weather Index By Hand</h2>
+<div class="section" id="overview">
+<h3>2.1.1. Overview</h3>
+<p>IRI has developed software to aid in the creation and pricing of indices. In this exercise, you will mimic the process that the software uses by doing an index design of your own completely by hand, to gain insight into the index design process.</p>
+<p>During this exercise, you will be receiving bits of new information in each :index:&#8217;Task&#8217; as you progress through your index design. Your job in this exercise is very similar to how it would be in the real world - you are sometimes forced to make decisions with limited information and do the best job you can with what you have at that moment. However, by the end of this exercise, you will be able to develop an initial index. Other educational material will discuss how to strengthen and validate the index.</p>
+<p>This activity consist of 6 main tasks:</p>
+<ol class="arabic simple">
+<li>Gathering information about the village</li>
+<li>Proposing an index window</li>
+<li>Summing up historical rainfall estimates</li>
+<li>Calculating triggers and exits</li>
+<li>Calculating payouts</li>
+<li>How to begin pricing your index</li>
+</ol>
+</div>
+<div class="section" id="context">
+<h3>2.1.2. Context:</h3>
+<p>This exercise is based on an example from the 2011 HARITA project in Tigray, Ethiopia.
+For the remainder of this exercise consider yourself as part of the HARITA project development team for 2011. Before an index is developed for a community, discussions should be held with farmers, community leaders and local experts to discuss relevant risk management strategies and cropping systems. For the sake of this exercise, it has already been determined that drought index insurance could be valuable to the farmers in the village and the community has requested that an index be designed to meet their needs. Your task is to design an index from start to finish. Good luck!</p>
+</div>
+<div class="section" id="task-1-gathering-information-about-the-village-village-x">
+<h3>2.1.3. Task 1: Gathering information about the village: Village X</h3>
+<p>Community and expert feedback is important for developing an index. This includes key planting and flowering dates, as well as past drought years. Sometimes all the information you gather will not perfectly agree, but a general consensus should be reached. If applicable, it can also be valuable to reference other indices that have been developed for nearby villages, if the villages have similar agroclimatology and planting strategies.</p>
+<p>Below, we have assembled consensus information from the community of Village X and local experts, while also taking into account the index of a neighboring similar village:</p>
+<img alt="../_images/villagex.png" class="align-center" src="../_images/villagex.png" />
+<p><em>Your Task: Answer these questions before proceeding to the next step.</em></p>
+<ol class="arabic simple">
+<li>What are the most important crops grown in Village X? _______________</li>
+<li>What is the preferred starting date of the critical window for the planting (late onset) stage? _______________</li>
+<li>What is the preferred ending date of the critical window for the planting (late onset) stage? _______________</li>
+<li>What is the preferred starting date of the critical window for the flowering (early cessation) stage? _______________</li>
+<li>What is the preferred ending date of the critical window for the flowering (early cessation) stage? _______________</li>
+<li>What is the biggest agricultural risk that Village X faces? _______________</li>
+<li>During which of the two windows would you rather have insurance coverage to best address this risk? Late onset (planting) or early cessation (flowering)? _______________</li>
+</ol>
+</div>
+<div class="section" id="task-2-proposing-an-index-window">
+<h3>2.1.4. Task 2: Proposing an index window</h3>
+<p>Using the information provided in Task 1, it is now time to begin developing an index for Village X. In this task you will decide on appropriate index windows (start and end dates) for both the planting and flowering phases of the season; these two phase are intended to target the periods in which farmers identified their crops as being most vulnerable to drought. Be sure to come to a consensus in your group, and make use of the dekad conversion table on the next page.</p>
+<p><em>Hint: The dates provided in the table in Task 1, may not always align perfectly with the start/end dates of a dekad. You may need to approximate in some cases.</em></p>
+<p><em>Your Task: Decide on the below factors for your new index.</em></p>
+<ol class="arabic simple">
+<li>Proposed start dekad for the planting window: ______________________________________</li>
+<li>Proposed end dekad for the planting window: _______________________________________</li>
+<li>Proposed start dekad for the flowering window: _____________________________________</li>
+<li>Proposed end dekad for the flowering window: ______________________________________</li>
+</ol>
+<p>Now you have set the windows for both indices, but you still have to determine appropriate trigger and exit values for each index. Step 3 and 4 will help you do this.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Start Day</th>
+<th class="head">Dekad</th>
+<th class="head">End Day</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>1-Jan</td>
+<td>1</td>
+<td>10-Jan</td>
+</tr>
+<tr class="row-odd"><td>11-Jan</td>
+<td>2</td>
+<td>20-Jan</td>
+</tr>
+<tr class="row-even"><td>21-Jan</td>
+<td>3</td>
+<td>31-Jan</td>
+</tr>
+<tr class="row-odd"><td>1-Feb</td>
+<td>4</td>
+<td>10-Feb</td>
+</tr>
+<tr class="row-even"><td>11-Feb</td>
+<td>5</td>
+<td>20-Feb</td>
+</tr>
+<tr class="row-odd"><td>21-Feb</td>
+<td>6</td>
+<td>28-Feb</td>
+</tr>
+<tr class="row-even"><td>1-Mar</td>
+<td>7</td>
+<td>10-Mar</td>
+</tr>
+<tr class="row-odd"><td>11-Mar</td>
+<td>8</td>
+<td>20-Mar</td>
+</tr>
+<tr class="row-even"><td>21-Mar</td>
+<td>9</td>
+<td>31-Mar</td>
+</tr>
+<tr class="row-odd"><td>1-Apr</td>
+<td>10</td>
+<td>10-Apr</td>
+</tr>
+<tr class="row-even"><td>11-Apr</td>
+<td>11</td>
+<td>20-Apr</td>
+</tr>
+<tr class="row-odd"><td>21-Apr</td>
+<td>12</td>
+<td>30-Apr</td>
+</tr>
+<tr class="row-even"><td>1-May</td>
+<td>13</td>
+<td>10-May</td>
+</tr>
+<tr class="row-odd"><td>11-May</td>
+<td>14</td>
+<td>20-May</td>
+</tr>
+<tr class="row-even"><td>21-May</td>
+<td>15</td>
+<td>31-May</td>
+</tr>
+<tr class="row-odd"><td>1-Jun</td>
+<td>16</td>
+<td>10-Jun</td>
+</tr>
+<tr class="row-even"><td>11-Jun</td>
+<td>17</td>
+<td>20-Jun</td>
+</tr>
+<tr class="row-odd"><td>21-Jun</td>
+<td>18</td>
+<td>30-Jun</td>
+</tr>
+<tr class="row-even"><td>1-Jul</td>
+<td>19</td>
+<td>10-Jul</td>
+</tr>
+<tr class="row-odd"><td>11-Jul</td>
+<td>20</td>
+<td>20-Jul</td>
+</tr>
+<tr class="row-even"><td>21-Jul</td>
+<td>21</td>
+<td>31-Jul</td>
+</tr>
+<tr class="row-odd"><td>1-Aug</td>
+<td>22</td>
+<td>10-Aug</td>
+</tr>
+<tr class="row-even"><td>11-Aug</td>
+<td>23</td>
+<td>20-Aug</td>
+</tr>
+<tr class="row-odd"><td>21-Aug</td>
+<td>24</td>
+<td>31-Aug</td>
+</tr>
+<tr class="row-even"><td>1-Sep</td>
+<td>25</td>
+<td>10-Sep</td>
+</tr>
+<tr class="row-odd"><td>11-Sep</td>
+<td>26</td>
+<td>20-Sep</td>
+</tr>
+<tr class="row-even"><td>21-Sep</td>
+<td>27</td>
+<td>30-Sep</td>
+</tr>
+<tr class="row-odd"><td>1-Oct</td>
+<td>28</td>
+<td>10-Oct</td>
+</tr>
+<tr class="row-even"><td>11-Oct</td>
+<td>29</td>
+<td>20-Oct</td>
+</tr>
+<tr class="row-odd"><td>21-Oct</td>
+<td>30</td>
+<td>31-Oct</td>
+</tr>
+<tr class="row-even"><td>1-Nov</td>
+<td>31</td>
+<td>10-Nov</td>
+</tr>
+<tr class="row-odd"><td>11-Nov</td>
+<td>32</td>
+<td>20-Nov</td>
+</tr>
+<tr class="row-even"><td>21-Nov</td>
+<td>33</td>
+<td>30-Nov</td>
+</tr>
+<tr class="row-odd"><td>1-Dec</td>
+<td>34</td>
+<td>10-Dec</td>
+</tr>
+<tr class="row-even"><td>11-Dec</td>
+<td>35</td>
+<td>20-Dec</td>
+</tr>
+<tr class="row-odd"><td>21-Dec</td>
+<td>36</td>
+<td>31-Dec</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="task-3-summing-up-historical-rainfall-estimates-village-x">
+<h3>2.1.5. Task 3: Summing up historical rainfall estimates: Village X</h3>
+<p>Drought indices can be triggered using rainfall data collected by rain gauges or satellites. There are advantages and disadvantages to both types of product and such decisions should be made on a project-by-project basis. In this example, decadal satellite rainfall estimates for the 10km by 10km square covering Village X are provided (on the next page). The satellite used to gather these measurements takes readings across all of Ethiopia, everyday. A cap of 25 millimeters has already been applied to this dekadal rainfall information. In other words, the maximum amount of rainfall that should be recorded for any dekad is 25mm</p>
+<p>The start and end dates presented below might be in a format you have never seen before. For example the first start date is &#8216;1-Jan/23-Dec&#8217;. You should only look at the first date given (1-Jan), as this corresponds to the Gregorian (or Roman) calendar. The other date (23-Dec) is based on the local calendar in this example and should be ignored for this exercise.</p>
+<p><em>Your Task: For the planting and flowering windows you selected in Step 2, add up the rainfall for every year since 1995. The table below will help you to do this. Then, in the third column, total the rainfall from the two phases (planting and flowering). Only use the first date listed in each box.</em></p>
+<table border="1" class="docutils" id="id1">
+<caption><span class="caption-text">Fill In Table</caption>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Year</th>
+<th class="head">Planting</th>
+<th class="head">Flowering</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>1995</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>1996</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>1997</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>1998</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>1999</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>2000</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>2001</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>2002</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>2003</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>2004</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>2005</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>2006</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>2007</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>2008</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>2009</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>2010</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<a class="reference internal image-reference" href="../_images/summingrainfall.png"><img alt="../_images/summingrainfall.png" class="align-center" src="../_images/summingrainfall.png" /></a>
+</div>
+<div class="section" id="task-4-calculating-triggers-and-exits">
+<h3>2.1.6. Task 4: Calculating triggers and exits</h3>
+<p>Imagine we were designing drought insurance for this village in 1994. Our goal over the next 16 years is to have one full payout, and about two or three smaller payments. Therefore, there would be a total of three to four drought years where farmers would have received a payment. Our job is to set the rainfall levels, below which farmers will start to receive a payment for drought. (If the farmers have both early (planting) and late (flowering) phase protection, then they may get payouts from either index. This may increase the number of years in which they receive a payout.)</p>
+<p>This payout strategy balances providing coverage for bad years with the cost of insurance. A farmer may wish to receive more full payouts and larger partial payments, but that type of additional coverage will typically cost more and not be very practical.</p>
+<p>For the remainder of this exercise we will be focusing on targeting drought during the <strong>Flowering Phase</strong>; the period that the farmers identified as most critical. We will develop an initial index only for the flowering phase. You would need to repeat the following steps for the planting phase to create an additional index that also provided protection during the early part of the season.</p>
+<p><em>Note: Using the table that you have created in step 3, rank the Flowering Phase rainfall totals for each year. Place the year with the highest rainfall at the top of the list, next to the &#8220;1&#8221;, and the year with the lowest rainfall total at the bottom of the list, next to the &#8220;16&#8221;. Fill in the rest of the years according to this strategy:</em></p>
+<p>1._____________</p>
+<p>2._____________</p>
+<p>3._____________</p>
+<p>4._____________</p>
+<p>5._____________</p>
+<p>6._____________</p>
+<p>7._____________</p>
+<p>8._____________</p>
+<p>9._____________</p>
+<p>10._____________</p>
+<p>11._____________</p>
+<p>12._____________</p>
+<p>13._____________</p>
+<p>14._____________</p>
+<p>15._____________</p>
+<p>16._____________</p>
+<p><em>Your Task: (You may also want to look at which years the community and local experts indicated as being the worst -remember the chart in Task 1)</em></p>
+<ol class="arabic simple">
+<li>In your opinion, out of the full list of 16 years, what is the one year that farmers should have received a maximum/full payment? __________________________________________________________________</li>
+<li>In your opinion, what is your exit value, in millimeters, or the rainfall total below which farmers should receive a full payment? As a guess, take the average between the worst year (#16) and the second worst year (#15). ____________________________________________________________________</li>
+<li>On your ranking of years (above), draw a line showing this &#8220;exit&#8221; value and label it.</li>
+<li>Besides those selected in question # 1, what are the two or three additional years that farmers should have received a payment? ____________________________________________________________________</li>
+<li>In your opinion, what is the trigger value in millmeters, or the rainfall total below which farmers should receive any type of payment? As a guess, take the average between the fourth worst year (#13) and the fifth worst year (#12). _____________________________________________________________________</li>
+<li>On your ranking of years (above), draw a line showing this trigger value. Years falling between the trigger and the exit values will receive a partial payment. These partial payment years should have fell during years of medium-sized droughts. Any year below the exit would have had a full payout. These payment years should fall during years of severe drought.</li>
+</ol>
+</div>
+<div class="section" id="task-5-calculating-payouts">
+<h3>2.1.7. Task 5: Calculating payouts</h3>
+<p>A <strong>Payout Formula</strong> is used to calculate what percentage of the maximum payout is owed to the farmer for each index. When the rainfall (X) is above the trigger, there is no payout. That means that the payout is equal to zero and you do not need to use the formula below. If the rainfall is between the trigger and the exit, than use the formula to calculate the exact payout percentage. It the rainfall is below the exit than there will be a full payout (100%), meaning that the maximum payout is owed to the farmer and you do not need to complete a calculation.</p>
+<blockquote>
+<div><dl class="docutils">
+<dt><strong>Payout =[(Trigger - X) / (Trigger - Exit)] x 100%</strong></dt>
+<dd><strong>X = that index&#8217;s rainfall total (the rainfall total during that window w/the cap applied</strong></dd>
+</dl>
+</div></blockquote>
+<p><em>Your Task: Using your trigger and exit from Step 4, calculate the payout for each year for the Flowering Phase Index. Record the payout for each year below:</em></p>
+<p>1995: _____________</p>
+<p>1996: _____________</p>
+<p>1997: _____________</p>
+<p>1998: _____________</p>
+<p>1999: _____________</p>
+<p>2000: _____________</p>
+<p>2001: _____________</p>
+<p>2002: _____________</p>
+<p>2003: _____________</p>
+<p>2004: _____________</p>
+<p>2005: _____________</p>
+<p>2006: _____________</p>
+<p>2007: _____________</p>
+<p>2008: _____________</p>
+<p>2009: _____________</p>
+<p>2010: _____________</p>
+<p><strong>Discussion:</strong>
+The more payout years (and larger payouts) your index has, the more expensive it will be for farmers to purchase. Thus indices that have the same exit but a higher trigger will be more expensive than indexes with lower triggers. Step 6 will further discuss index pricing.</p>
+</div>
+<div class="section" id="task-6-how-to-begin-pricing-your-index">
+<h3>2.1.8. Task 6: How to begin pricing your index</h3>
+<p>This section is an introduction to pricing an index. Using the information below you will begin to analyze the price of the index you have created. These pricing parameters will be discussed and analyzed in greater depth in other Educational Exercises.</p>
+<p><em>Note that all the pricing values are given in percentages. These numbers are given in terms of the maximum payout that a farmer can receive. In these educational exercises, the maximum possible payout is set to be 100 to enable you to think of payout values as a percentage. For example if a value is equal to 20%, then it is 20 percent of the maximum payout that the farmer can receive. If the maximum payout is 100 dollars, then the value for this payout is 20 dollars.</em></p>
+<p>The final <strong>Market/Farmer</strong> Price of the index is a combination of the <strong>Average Payout</strong> and <strong>Loading</strong> values. The Market/Farmer Price is the price the farmers will actually pay to hold the insurance.</p>
+<p><strong>Market/Farmer Price = Average payout + Loading</strong></p>
+<p><strong>Step 1: Average Price:</strong> When beginning to price your index, you should start by calculating the <strong>Average Payout.</strong> The Average Payout is the amount (on average) that the farmers will receive each year they hold the insurance, including years where they receive no payment. The final price of your index must be greater than that of the average payout.  Think about it: <strong>Why is this?</strong></p>
+<p><strong>Average payout = (Sum of all payouts) / total number of years (in this case, 16)</strong></p>
+<p><strong>Your Task:</strong></p>
+<p>Calculate the Average Payout of your <strong>Flowering Phase</strong> index and enter it here: ___________</p>
+<p><strong>Step 2: Loading:</strong> From here there are additional costs, or &#8220;Loading&#8221; that should also be factored into the final <strong>Market/Farmer price</strong> of the index. These include:</p>
+<ol class="arabic simple">
+<li>Cost of financing the risk</li>
+<li>Administrative and delivery costs</li>
+<li>Costs due to uncertainty</li>
+</ol>
+<p><strong>Loading = Cost of financing the risk + Administrative and delivery costs + Costs due to uncertainty</strong></p>
+<p>For now we will specifically focus on Loading due to the <strong>&#8220;cost of financing the risk&#8221;</strong>. By calculating this part of the Loading and accounting for it in the market/farmer price, we can get a starting price from which to work. We will take a more in depth look at all of these Loading considerations in the WIIET and Pricing Educational Sections.</p>
+<p><strong>Discussion: Loading due to the &#8220;cost of financing the risk&#8221;:</strong> In addition to the average payout, the insurance company must maintain sufficient capital on hand to be able to cover extreme payouts. Insurance companies will choose (or be required by regulations) to keep sufficient liquidity to honor payouts and must pay interest on this money, which contributes to the price of the insurance.</p>
+<p>Commonly, the money for extreme payouts is borrowed from the insurance company&#8217;s shareholders, so the interest paid is the return on the shareholders&#8217; investment in the company. This money is held specifically to manage risk, as opposed to being put into investments (such as agricultural inputs) that would provide returns through production.</p>
+<p>Often, insurance companies hold enough money to cover their best estimate of the largest payout they anticipate happening in 100 years. In our case, we know that a full payout is the maximum payout, and it is likely to happen multiple times in 100 years, because it would have happened in the past 15 years.</p>
+<p>Holding enough money to cover extreme events is a fundamental cost of risk management. An individual farmer faces a similar choice whether she purchases insurance, maintains savings &#8216;for a rainy day&#8217;, or borrows to cover losses after the drought has occurred. It is the basic tradeoff of how much money to keep liquid in case there is drought versus the money that is put at risk for higher returns by investing in inputs to a productive activity that may experience a loss.</p>
+<p>From a risk financing perspective, the key difference between the insurance company and the farmer is that the insurance company can build a large portfolio of unrelated (or even opposite) risks. This way the amount of money that must be held is less than the farmer would have to reserve. Premiums (payments) received each year by the insurance company can also be used as payouts that year, reducing the amount of money that must be borrowed.</p>
+<p>The formula for calculating the Loading due to the cost of financing risk is:</p>
+<p>Loading due to the cost of financing risk = cost of capital x (Maximum Payout-Average payout)</p>
+<p>For this example, set the <strong>&#8220;cost of capital&#8221;</strong> on the right hand side of this formula to 0.10. This means that the insurance company must pay ten percent interest on the money it borrows to honor large payouts.</p>
+<p><strong>Your Task:</strong></p>
+<p>Calculate the <strong>Loading due to the cost of financing risk</strong> of your <strong>Flowering Phase</strong> index and enter it here: _____________________________________________________</p>
+<p><strong>Step 3: Calculating an Initial Market/Farmer Price (risk price)</strong></p>
+<p>Here you will calculate an <strong>Initial Market/Farmer Price</strong>, also known as a risk price, by adding the Average Payout and the Loading due to cost of financing. This is only a starting point for figuring out the final market/farmer price; you have yet to consider other Loading factors, such as: 1. Administrative and delivery costs, and 2. the Cost of uncertainty.</p>
+<p><strong>Risk Price = Average Payout + Loading due to the cost of financing risk</strong></p>
+<p><strong>Your Task:</strong></p>
+<p>Calculate the <strong>Risk Price</strong> of your <strong>Flowering Phase</strong> index and enter it here: ________</p>
+<p>You should be aware that this is a working price for design purposes and is likely to be somewhat different than the final price of a transacted contract. The actual price of the insurance tends to be higher than the starting prices you calculate here, due to the additional Loading costs mentioned above. You will explore these factors further in other Educational Activities. In addition, the actual price of the insurance will most likely be negotiated between the project stakeholders, and may be calculated using different formulas than those built into the pricing module.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index_updated_educationalMat.html">
+              <img class="logo" src="../_static/iri.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../index_updated_educationalMat.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">2. Checkpoint: Designing an Initial Weather Index By Hand</a><ul>
+<li><a class="reference internal" href="#topic-designing-an-initial-weather-index-by-hand">2.1. Topic: Designing an Initial Weather Index By Hand</a><ul>
+<li><a class="reference internal" href="#overview">2.1.1. Overview</a></li>
+<li><a class="reference internal" href="#context">2.1.2. Context:</a></li>
+<li><a class="reference internal" href="#task-1-gathering-information-about-the-village-village-x">2.1.3. Task 1: Gathering information about the village: Village X</a></li>
+<li><a class="reference internal" href="#task-2-proposing-an-index-window">2.1.4. Task 2: Proposing an index window</a></li>
+<li><a class="reference internal" href="#task-3-summing-up-historical-rainfall-estimates-village-x">2.1.5. Task 3: Summing up historical rainfall estimates: Village X</a></li>
+<li><a class="reference internal" href="#task-4-calculating-triggers-and-exits">2.1.6. Task 4: Calculating triggers and exits</a></li>
+<li><a class="reference internal" href="#task-5-calculating-payouts">2.1.7. Task 5: Calculating payouts</a></li>
+<li><a class="reference internal" href="#task-6-how-to-begin-pricing-your-index">2.1.8. Task 6: How to begin pricing your index</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="conceptsbehindindexdesign_en_Web.html"
+                        title="previous chapter">1. Concepts Behind Index Design</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="conceptsbehindindexdesignanskey_en.html"
+                        title="next chapter">3. Checkpoint Answer Key: Setting Triggers and Exits</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/whatisindexinsurance/designingindexbyhand.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="conceptsbehindindexdesignanskey_en.html" title="3. Checkpoint Answer Key: Setting Triggers and Exits"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="conceptsbehindindexdesign_en_Web.html" title="1. Concepts Behind Index Design"
+             >previous</a> |</li>
+        <li><a href="../index_updated_educationalMat.html">updated_educationalMat</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2015, International Research Institute for Climate and Society, Columbia University, New York, USA.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>2. WIIET Exercise 2: Influence of Short Datasets on Prices (Advanced Exercise) &mdash; Index Insurance Sample Educational Tools 2.0.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '2.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="Index Insurance Sample Educational Tools 2.0.0 documentation" href="../index_updated_educationalMat.html" />
+    <link rel="next" title="3. WIIET Exercise 3: Moving from Initial Pricing to Market Pricing" href="wiiet_initialtomarketpricing_Web.html" />
+    <link rel="prev" title="1. WIIET Exercise 1: Updating an Index Using Farmer Information" href="wiiet_usingfarmerinformation_Web.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="wiiet_initialtomarketpricing_Web.html" title="3. WIIET Exercise 3: Moving from Initial Pricing to Market Pricing"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="wiiet_usingfarmerinformation_Web.html" title="1. WIIET Exercise 1: Updating an Index Using Farmer Information"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index_updated_educationalMat.html">updated_educationalMat</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="wiiet-exercise-2-influence-of-short-datasets-on-prices-advanced-exercise">
+<h1>2. WIIET Exercise 2: Influence of Short Datasets on Prices (Advanced Exercise)</h1>
+<div class="section" id="topic-influence-of-short-datasets-on-prices-advanced-exercise">
+<h2>2.1. Topic: Influence of Short Datasets on Prices (Advanced Exercise)</h2>
+<div class="section" id="objective">
+<h3>2.1.1. Objective</h3>
+<p>The goal of this exercise is to illustrate how shorter datasets can lead to increased insurance prices, as well as to illustrate some trade-offs between historical burn analysis and using simulated rainfall. This module is intended to follow WIIET Exercise 1: Updating an index using farmer information.</p>
+</div>
+<div class="section" id="introduction">
+<h3>2.1.2. Introduction</h3>
+<p>For further clarification or a more detailed description of the WIIET terms and tools, please refer to the <strong>User Guide</strong> or <strong>Glossary.</strong> Both can be found by clicking on their respective icons on any of the WIIET pages.</p>
+<p>This module uses hypothetical indices and datasets. However, it is based on rainfall data and modified versions of the indices from the R4 project, in Ethiopia.</p>
+<p><strong>Software note:</strong> As stated in Exercise 1, it is ideal to complete these WIIET modules using the Firefox browser. The tool is designed to work with other browsers, however you may encounter some occasional &#8220;bugs&#8221; in the system. We are currently working to fix these kinks and have included work-arounds in this material. For example, depending on your specific browser, you may need to reload the page or return to the main menu so that saved datasets are visible for future activities.</p>
+</div>
+<div class="section" id="exercise-overview">
+<h3>2.1.3. Exercise Overview</h3>
+<p><strong>Background Information:</strong> In the previous exercise, you updated a contract by focusing on historical precipitation data and farmer experiences. The focus on historical data had many benefits. It allowed you to understand the index, communicate it to the farmers, and modify the index to reflect their experiences. In addition, it prevented you from relying on complex statistical models, which may have limitations of which you are not aware and may generate unrealistic results based on model assumptions and structure (see <a class="reference external" href="http://iri.columbia.edu/publications/id=875">http://iri.columbia.edu/publications/id=875</a> p52-56 for more information).</p>
+<p>However, there are several limitations of using historical data alone: One limitation is that possible rainfall for the coming year is confined to rainfall amounts exhibited in the historical data. This makes it impossible to have rainfall amounts that are different from what was experienced in the past. This limitation can lead you to accidentally over-fit to the historical data. In other words, it can create indices that are too tailored to particular events of the past to be flexible enough to address the wide range of possibilities that may occur in the future.</p>
+<p>Another limitation with using historical data alone is that it does not provide you with the tools to address important questions that statistical modeling of rainfall can help you understand. We will focus on one such question: How do very short historical datasets impact insurance prices?</p>
+</div>
+</div>
+<div class="section" id="task-1-set-up-historical-rainfall-data-set">
+<h2>2.2. Task 1: Set-up; historical rainfall data set</h2>
+<p><strong>In WIIET Exercise 1, you should have entered, run and saved the results from the &#8220;original&#8221; index.</strong> If you have already performed these steps, you can always navigate back to your saved parameters by navigating the &#8220;saved parameter sets&#8221; drop down menu in Step 2 of the &#8220;Create Contracts&#8221; module.</p>
+<p><strong>If you have not performed those steps, you can do so by following the instructions below</strong> (The definitions for the terms used here are provided in earlier Exercises, as well as in the WIIET Glossary):</p>
+<ol class="arabic simple">
+<li>Log on to WIIET</li>
+<li>Go to <strong>create contract</strong> module on the left hand side of the page</li>
+<li>Click on <strong>Example Satellite Precipitation</strong> in the <em>Step 1</em> window on the left, to select that rainfall dataset</li>
+<li>In the <em>Step 2</em> window it asks &#8220;When would you like the contract to begin? Click on <strong>Contract Start Dekad</strong> and set the contract start dekad as: 11-Aug</li>
+<li><em>Length of Contract Period:</em> select <strong>7</strong> dekads</li>
+<li>At the bottom of the <em>Step 2</em> box there is a matrix referring to <em>phases</em> covered. Click on the remove phase button until you have only <strong>Phase 1.</strong> Next, make sure each of the circles in that phase are blue by clicking on them.</li>
+<li>Under <em>Step 3</em> you can set the <em>Dekadal Cap</em> to <strong>25</strong></li>
+<li>Set the Contract Failed Start Liability to <strong>100</strong></li>
+<li>On the bottom most table set the <em>Trigger</em> to <strong>82</strong></li>
+<li>Set the <em>Exit</em> to <strong>60</strong></li>
+<li>Set the <em>liability</em> for the phase to <strong>100</strong></li>
+<li>Set the <em>Maximum liability</em> to <strong>100</strong></li>
+<li>Now you are ready to Run Simulation: Click on the bottom right side of the page</li>
+<li>Once you get these results, click on <strong>&#8216;save parameters&#8217;,</strong> in blue on the left hand side of the screen.  Use the name: <strong>&#8220;original&#8221;,</strong> and description <strong>&#8220;original index&#8221;.</strong> Then click <strong>save.</strong> Then click <strong>close.</strong></li>
+</ol>
+</div>
+<div class="section" id="task-2-thinking-about-simulated-rainfall">
+<h2>2.3. Task 2: Thinking about simulated rainfall</h2>
+<p><strong>Discussion:</strong> Using historical data to design and evaluate your contract is known as &#8216;historical burn&#8217; analysis. It is extremely transparent and can be easily communicated to stakeholders. In historical burn analysis, the probability distribution of the indexed parameter is determined entirely by past measurements. Although useful, when applied without other analyses this approach has limitations. For example, one or two major events can distort the index design, while any event that has not happened in the historical record is assumed to not be possible for the coming year.</p>
+<p>Due to the limitations of historical burn analysis, it is typically complimented with rainfall modeling and simulation. Using available rainfall data plus an understanding of the variables that influence rainfall, the modeling generates hundreds of years of synthetic rainfall data, including events that are possible but have not occurred in the past. This approach can be helpful in exploring limited datasets, allowing for more accurate estimates of diagnostics for index performance, less idiosyncratic indices, and the potential to model the limitations of short datasets.</p>
+<p>The <em>Rainfall Simulator</em> module in WIIET will generate approximately one thousand years of rainfall data based on the statistical properties of the precipitation data set selected. This module is useful in places where there is very little historical rainfall data because it uses methods that automatically build in additional variation in the rainfall to reflect increased uncertainty due to limited length of datasets.</p>
+<p>The <em>Rainfall Simulator</em> module estimates parameters of a statistical model for rainfall based on the observed data. When the model is used to generate random years of rainfall, the simulations are impacted by the amount of data used to fit the model. The model and its associated rainfall simulations account for (1) the natural variation in rainfall in that climate, and (2) the uncertainty in the estimation of the climate due to the limited length of the historical dataset. Accounting for this uncertainty adds extra variability to the simulated rainfall years.</p>
+<p>How is this done? As with any statistical estimation, when the parameters of the rainfall model are estimated, the process results in standard errors, which reflect how confident we are in the accuracy of our estimates. For a short rainfall time series, the standard errors will most likely be larger, reflecting less information. As the number of years of observed rainfall increases, standard errors tend to decrease, reflecting the higher accuracy of estimation. The standard errors of the parameters therefore reflect the set of possible parameters that may identify the true range of potential rainfall amounts.</p>
+<p>After the parameters and standard errors of the rainfall model are estimated, the model produces rainfall for the generation of random years by 1) randomly selecting parameters to run the rainfall model from the range determined by the standard errors from the estimation. 2) Randomly selecting rainfall amounts for a model using the chosen parameters. This process repeats hundreds and hundreds of times to ensure the generation of a wide range of possible rainfall amounts for the range of possible climates.</p>
+<p>There are many situations in which a rainfall simulator does not accurately reflect true rainfall statistics, so you should always view results from any rainfall simulator with a critical eye. In order to reach acceptable performance and reliability, the simulator models rainfall over 10 day periods instead of modeling daily rainfall. Also, this model only reflects the spread of possible climates expressed in the statistical uncertainty of the rainfall model estimation; other sources of climate uncertainty are not incorporated in the model.</p>
+<p>Because the rainfall is generated randomly, each time you run the module, the results are slightly different. Although it is possible for you to generate simulated rainfall datasets yourself using the Rainfall Simulator module, we have generated a set of simulated rainfall datasets so everyone in the workshop uses identical data to complete this exercise.</p>
+<p><strong>Questions: (Based on the Discussion above)</strong></p>
+<ol class="arabic simple">
+<li>Does the rainfall in years generated by the rainfall simulator have more variation in rainfall than the historical record or less?  Why or why not?</li>
+</ol>
+</div>
+<div class="section" id="task-3-applying-a-simulated-rainfall-dataset">
+<h2>2.4. Task 3: Applying a simulated rainfall dataset</h2>
+<p><strong>Context:</strong> In WIIET Exercise 1, you generated payouts for a particular index using the historical rainfall data. Now you will generate a set of payouts using the simulated rainfall dataset. In both cases, for the sake of index design, you are assuming that the upcoming year will be one of the years in the rainfall dataset. Let&#8217;s see how our understanding of the index changes as we use the simulated rainfall.</p>
+<p>We have already created a simulated dataset for you entitled <em>&#8220;Full dataset simulated rainfall&#8221;.</em> This dataset was created through the &#8220;Rainfall Simulator&#8221; module, using the same rainfall data that you used in the first Task. It is possible for you to create your own simulated dataset, but it can take a few minutes for the server to simulate 1,000 years of rainfall data; therefore we will not complete that task during this module.</p>
+<p><strong>First, we need to generate a new set of payouts using the simulated rainfall dataset and the parameters that you already entered, so we can compare results.</strong></p>
+<ol class="arabic simple">
+<li>Go to <strong>create contract</strong> module on the left hand side of the page</li>
+<li>Click on <strong>Full dataset simulated rainfall</strong> in the <em>Step 1</em> window on the left to select the new, simulated rainfall dataset</li>
+<li>In the <em>Saved Parameter Sets</em> window click on <strong>original,</strong> the index you have already created</li>
+<li>Now you are ready to <strong>Run Simulation:</strong> Click on the bottom right side of the page</li>
+<li>The simulation will take longer this time, because it is processing about a thousand years of data. The payout year table and figure will now have about a thousand elements, with the simulation years beginning with year 1.</li>
+<li>Once you get these results, click on <strong>&#8216;save parameters&#8217;,</strong> in blue on the left hand side of the screen.  Use the name: <strong>&#8220;fullsimulation-original&#8221;,</strong> and description <strong>&#8220;simulation using full historical dataset, original index&#8221;.</strong> Then click <strong>save.</strong> Then click <strong>close.</strong></li>
+</ol>
+</div>
+<div class="section" id="task-4-historical-verses-simulated-rainfall-data">
+<h2>2.5. Task 4: Historical verses simulated rainfall data</h2>
+<p><strong>Context:</strong> Now we will compare the effects of using historical data versus simulated rainfall data on the variance in payouts, our estimation of how frequently payouts will occur, and the implications this has for premium pricing. We will use the &#8220;Pricing&#8221; module of WIIET for this analysis to generate a &#8216;pseudo&#8217; risk price that can be used to understand how risk might impact final insurance prices.</p>
+<p><strong>Discussion:</strong> The intent of the risk price is to allow the designer to model risk protection and insurance cost tradeoffs sufficiently to make quality design decisions. You should be aware that it is a working price for design purposes and is likely to be somewhat different than the final price of a transacted contract. The actual price of the insurance will most likely be negotiated between the project stakeholders, and may be calculated using different formulas than those built into the pricing module. Often, prices are driven by proprietary analysis done by the insurance companies. Insurance costs have additional components, including the administrative costs of providing insurance and the delivery costs of registering clients and distributing their payouts. The actual price of the insurance tends to be higher than the risk prices you calculate here, due to these additional costs.</p>
+<p><strong>Questions:</strong></p>
+<ol class="arabic simple">
+<li>Will insurance prices be higher than the risk prices you calculate using WIIET? ________________________________________________________________</li>
+<li>Why or why not? ________________________________________________________________________________________________________________________</li>
+<li>What is the purpose of calculating risk prices using WIIET? ________________________________________________________________________________________</li>
+</ol>
+</div>
+<div class="section" id="task-5-risk-pricing">
+<h2>2.6. Task 5: Risk Pricing</h2>
+<p><strong>Discussion:</strong> The risk component of the price of insurance is driven by the expense of the financing necessary to assure payouts, estimated using the best information on the likelihood and size of a payout in the coming year.</p>
+<p>There are two components to the risk price:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>The first is simply the average payout. The insurance premium must be sufficient to cover the average amount of money being paid out. If $100 is paid by the insurance about 1/10 of the time, the premium must be at least $10.</li>
+<li>In addition to the average payout, the insurance company must maintain sufficient capital on hand to be able to cover extreme payouts. Insurance companies will choose (or be required by regulations) to keep sufficient liquidity to honor payouts and must pay interest on this money, which contributes to the risk cost of the premium.</li>
+</ol>
+</div></blockquote>
+<p>Commonly, the money for extreme payouts is borrowed from the insurance company&#8217;s shareholders, so the interest paid is the return on the shareholders&#8217; investment in the company. This money is held specifically to manage risk, as opposed to being put into investments (such as agricultural inputs) that would provide returns through production.</p>
+<p>Often, insurance companies hold enough money to cover their best estimate of the largest payout they anticipate happening in 100 years. In our case, we know that a full payout is the maximum payout, and it is likely to happen multiple times in 100 years, because it would have happened in the past 15 years.</p>
+<p>Holding enough money to cover extreme events is a fundamental cost of risk management. An individual farmer faces a similar choice whether she purchases insurance, maintains savings &#8216;for a rainy day&#8217;, or borrows to cover losses after the drought has occurred. It is the basic tradeoff of how much money to keep liquid in case there is drought versus the money that is put at risk for higher returns by investing in inputs to a productive activity that may experience a loss.</p>
+<p>From a risk financing perspective, the key difference between the insurance company and the farmer is that the insurance company can build a large portfolio of unrelated (or even opposite) risks. This way the amount of money that must be held is less than the farmer would have to reserve. Premiums received each year by the insurance company can also be used as payouts that year, reducing the amount of money that must be borrowed.</p>
+<p>For this exercise, the calculation of the &#8220;pseudo price&#8221; for risk is below.</p>
+<p>Price = Average payout including zero payout years + <strong>cost of capital</strong> * (Maximum Payout - average payout)</p>
+<p><em>In WIIET the &#8220;cost of capital&#8221; is labeled &#8220;loading&#8221;</em></p>
+<p><strong>To use the pricing module of WIIET to analyze the payout information, follow the steps below</strong> (The definitions for the terms used here are provided in previous educational and WIIET exercises, as well as in the WIIET Glossary):</p>
+<p><strong>A. Risk Pricing for Historical Rainfall</strong></p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Go to <strong>Pricing</strong> module (tab on top of page, or if you just logged in, just below the create contract module).</li>
+<li>Click on <strong>original</strong> in the Payout Data Series window of Step 1, on the left. Now you have selected the payouts you calculated already for the original contract using the historical rainfall dataset.</li>
+<li>Set the <em>Maximum Liability</em> to <strong>100.</strong> This is the total amount of money insured, $100 across all phases. This is to reflect the amount you set when you create the contract.</li>
+<li>Set the <em>Value at Risk</em> to <strong>1</strong>. This tells the pricing software that the money to hold to should be enough to pay the entire maximum liability.</li>
+<li>Set the <em>Loading</em> (cost of capital) to <strong>0.10.</strong>  This means that the insurance company must pay ten percent interest on the money it borrows to honor large payouts.</li>
+<li>Click on <strong>Run,</strong> on the bottom right, to see the results.</li>
+<li>Once you are satisfied with the results, click on <strong>Print/View,</strong> on the left hand side of the page. The results will open in a new window.</li>
+</ol>
+</div></blockquote>
+<p><strong>Interpreting the Results:</strong> When you run the pricing module, it makes a table of calculated numbers. While not all of these numbers are informative for our current exercise, a description of each value is provided below:</p>
+<p>The <em>Maximum Payout</em> is the largest payout that occurred in the data set. In this exercise, the largest possible maximum payout is set to be 100, so you can think of the payout values as a percentage.</p>
+<p>The price is presented in two ways: <em>Premium in Cash</em> provides the actual amount of money that will be charged for active insurance coverage based on the risk price formula. Because the maximum payout is $100, this will be identical to the <em>Premium as a percentage of sum insured,</em> which presents the price as a fraction of the maximum possible payout.</p>
+<p>The <em>Value of Loss at Value at Risk Percentile</em> calculates the amount of money that the insurance company would need to cover the biggest payout anticipated.  We have conservatively set this to be the maximum payout.</p>
+<p>The <em>Payout Variance</em> is the statistical value of the variance in payouts from year to year. A larger value indicates a widely varied contract, whereas a smaller value indicates a contract for which the payout does not vary greatly from year to year.</p>
+<p>The <em>Mean</em> (average) <em>payout</em> is the total of all the payouts divided by the number of years in the data set. The <em>Number of years</em> is the number of years in the data set, while the <em>Number of payouts</em> over the course of these years is also presented in the table.</p>
+<p><strong>Questions:</strong></p>
+<ol class="arabic simple">
+<li>What is the risk premium of the original contract calculated using the historical data?  _____________________________________________________________</li>
+<li>What is the average payout? ____________________________________________</li>
+<li>Why is the premium higher than the average payout? ____________________________________________________________________</li>
+</ol>
+<p><strong>B. Risk Pricing for Simulated Rainfall</strong></p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Navigate back to adjust your parameters by clicking on the grey &#8220;view parameters&#8221; bar at the top of the screen.</li>
+<li>Repeat the previous pricing steps above; however, this time use the <strong>fullsimulation-original</strong> payout data series (select this dataset under <em>Payout Data Series).</em> This will allow you to compare the simulated rainfall payout results with the historical rainfall payout results you just calculated.</li>
+<li>When you are done, click on <strong>Print/View these results.</strong> This will open a new window with the new results, so that you can compare the two sets of output. You may need to drag one window to the side so they do not completely cover each other. If you get confused about which window is which, you can look at the number of years, which will be 15 for the historical series and almost 1000 for the simulated series.</li>
+</ol>
+</div></blockquote>
+<p><strong>Questions:</strong></p>
+<ol class="arabic simple">
+<li>Which payout series has a higher risk price? ______________________________</li>
+<li>Why? _____________________________________________________________</li>
+<li>What is the payout rate for the simulated series (divide the number of payouts by the number of years)? _______________________________________________________________</li>
+<li>Is this higher or lower than the 30% payout rate obtained when using the historical data series? ______________________________________________________</li>
+<li>Why? ___________________________________________________________</li>
+</ol>
+<p><strong>Advanced Question:</strong></p>
+<p>Although the mean payout is higher for the simulated payout series (as would be expected), the variance in the payouts is actually lower. How is this possible and what does it say about the changes in payouts? __________________________________</p>
+</div>
+<div class="section" id="task-6-length-of-dataset-and-risk-price-of-insurance">
+<h2>2.7. Task 6: Length of dataset and risk price of insurance</h2>
+<p><strong>Discussion:</strong> Information quality impacts the fundamental cost of insurance. The premium must reflect the range of possible payouts that may occur. Otherwise, the insurance company cannot responsibly commit to honoring the insurance contract. As information improves about the probabilities of payouts, that information can reduce the cost of insurance, so that overly conservative levels of reserves and premiums are not required. Because the rainfall simulation module builds into the rainfall simulation the increased uncertainty about climate when using shorter datasets, we can explore the implications of having less data.</p>
+<p><strong>Context:</strong> The rainfall simulation you used in the previous calculations was based on the complete set of 15 years of historical data. To see how our calculations would change if we only had the past five years of data, we have also run the rainfall simulation using only the past 5 years of historical data. This is saved as Short dataset simulated rainfall.</p>
+<p><strong>Complete the following steps:</strong></p>
+<ol class="arabic simple">
+<li>Go back to the <strong>create contract</strong> module. Calculate the payouts for this dataset using the original contract.  Select <strong>Short dataset simulated rainfall</strong> under the <em>Precipitation Datasets</em> in <em>Step 1.</em> Then select your <strong>Original</strong> contract in <em>Saved Parameter Sets</em> under <em>Step 2.</em></li>
+<li>Next click on <strong>Run Simulation</strong> at the bottom right of the screen.</li>
+<li>Save these parameters as recentsimulation-original, by clicking <strong>Save the parameters</strong> on the left.</li>
+</ol>
+<p><strong>Go to the pricing module and run it using this payout series:</strong></p>
+<ol class="arabic simple">
+<li>Click <strong>Pricing</strong> at the top of the screen and navigate back to adjust your parameters.</li>
+<li>Select <strong>recentsimulation-original,</strong> under the <em>Payout Data Series</em> in <em>Step 1.</em></li>
+<li>Your other parameters should remain the same as when you ran the pricing module before.</li>
+<li>Click <strong>Run</strong> at the bottom right of the screen.</li>
+</ol>
+<p><strong>Questions:</strong></p>
+<ol class="arabic simple">
+<li>Is the payout rate (number of payouts/number of years) for the simulated rainfall series using the recent data series higher or lower than that of the simulated rainfall series using the full set of historical data? _________________________________</li>
+<li>Why? _____________________________________________________________</li>
+<li>Are the mean, variance, and price for the simulated rainfall series using the recent data series higher or lower than that of the simulated rainfall series using the full set of historical data? ___________________________________________________</li>
+<li>Why? ______________________________________________________________</li>
+</ol>
+<p><strong>Advanced Task:</strong></p>
+<p>For additional comparisons, create a set of payouts using only the past five years of historical data (Recent Satellite precipitation). Save it as recenthistorical-original.  Then run the pricing module on this series.</p>
+<p><strong>Questions:</strong></p>
+<p>Can comparison of short and long historical datasets give you the information you got from earlier tasks comparing simulated rainfall? Why or why not? _______________</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index_updated_educationalMat.html">
+              <img class="logo" src="../_static/iri.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../index_updated_educationalMat.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">2. WIIET Exercise 2: Influence of Short Datasets on Prices (Advanced Exercise)</a><ul>
+<li><a class="reference internal" href="#topic-influence-of-short-datasets-on-prices-advanced-exercise">2.1. Topic: Influence of Short Datasets on Prices (Advanced Exercise)</a><ul>
+<li><a class="reference internal" href="#objective">2.1.1. Objective</a></li>
+<li><a class="reference internal" href="#introduction">2.1.2. Introduction</a></li>
+<li><a class="reference internal" href="#exercise-overview">2.1.3. Exercise Overview</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#task-1-set-up-historical-rainfall-data-set">2.2. Task 1: Set-up; historical rainfall data set</a></li>
+<li><a class="reference internal" href="#task-2-thinking-about-simulated-rainfall">2.3. Task 2: Thinking about simulated rainfall</a></li>
+<li><a class="reference internal" href="#task-3-applying-a-simulated-rainfall-dataset">2.4. Task 3: Applying a simulated rainfall dataset</a></li>
+<li><a class="reference internal" href="#task-4-historical-verses-simulated-rainfall-data">2.5. Task 4: Historical verses simulated rainfall data</a></li>
+<li><a class="reference internal" href="#task-5-risk-pricing">2.6. Task 5: Risk Pricing</a></li>
+<li><a class="reference internal" href="#task-6-length-of-dataset-and-risk-price-of-insurance">2.7. Task 6: Length of dataset and risk price of insurance</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="wiiet_usingfarmerinformation_Web.html"
+                        title="previous chapter">1. WIIET Exercise 1: Updating an Index Using Farmer Information</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="wiiet_initialtomarketpricing_Web.html"
+                        title="next chapter">3. WIIET Exercise 3: Moving from Initial Pricing to Market Pricing</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/wiiet/wiiet_influenceshortdatasets_Web.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="wiiet_initialtomarketpricing_Web.html" title="3. WIIET Exercise 3: Moving from Initial Pricing to Market Pricing"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="wiiet_usingfarmerinformation_Web.html" title="1. WIIET Exercise 1: Updating an Index Using Farmer Information"
+             >previous</a> |</li>
+        <li><a href="../index_updated_educationalMat.html">updated_educationalMat</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2015, International Research Institute for Climate and Society, Columbia University, New York, USA.
+    </div>
+  </body>
+</html>

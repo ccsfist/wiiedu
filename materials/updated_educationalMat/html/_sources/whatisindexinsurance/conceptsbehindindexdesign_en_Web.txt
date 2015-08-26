@@ -1,0 +1,36 @@
+Concepts Behind Index Design
+=============================
+
+Topic: Setting Triggers and Exits
+---------------------------------
+
+Introduction
+~~~~~~~~~~~~
+
+The first two columns of the chart below show the amount of rainfall received during the end of the rainy season for 15 historic years. The second two columns begin to order the years by the amount of rainfall received, but have only been partially filled in. Using the information in this table, we will explore one way to set triggers and exits for an initial draft drought index that targets early cessation of the rainy season. This example is based on the R4 project, in Ethiopia.
+
+The method used below is called historical burn analysis, as it relies on the past to provide a key to what might occur in the future. Using this approach, it is assumed that the coming year will look like one of the years that has already occurred. Therefore, the historical years are used to determine an appropriate trigger and exit for next season's index insurance contract. While this is a simplistic approach, it provides a starting point from which contracts can be further developed and refined.
+
+.. csv-table:: Setting Triggers and Exits Using Historical Burn Analysis
+   :file: ../csv/adjtab.csv
+   :header-rows: 1
+ 
+
+Checkpoint: Setting Triggers and Exits
+--------------------------------------
+
+*Note: Please use the following instructions to fill in the remaining spaces of the last two columns of the chart:*
+
+1. First, order the above years and corresponding rainfall totals by the amount of rainfall received. Start with the largest rainfall total at the top of the chart and end with the least amount of rainfall at the bottom. The first ten rows have already been filled in to expedite this task. Please fill in the remaining blanks.
+
+2. Draw a line separating the worst rainfall year from the years above. This line represents the Exit, or the point below which a complete payout is provided. In this initial draft index the Exit is designed so there is a full payout for the worst year in the past fifteen. Here, the Exit would be set to equal the worst year's rainfall total rounded up to the nearest whole number.
+
+3. What is the Exit value for this contract? ________________________  
+
+4. Assume we are interested in a contract that would payout four times in the past fifteen years.  Draw a dotted line separating the worst four rainfall years from the years above. This line represents the Trigger for a contract that would payout four times in the past fifteen years. The first three years below this line would have resulted in partial payouts, while the worst year would have resulted in a full payout. For this initial draft index, the Trigger would be approximately halfway between the fourth and fifth worst years. 
+
+5. Choose a value to Trigger the contract: ____________________________
+
+
+
+

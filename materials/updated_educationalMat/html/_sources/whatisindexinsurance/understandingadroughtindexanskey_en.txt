@@ -1,0 +1,26 @@
+Checkpoint Answer Key: Understanding a Drought Index
+=======================================================
+
+**Answers**
+
+1. What is the start date of the phase 1 contract? **1-May**
+
+2. For the start date, what does the number in parentheses represent? **The dekad or 10-day period in of the year in which the contract will begin**
+
+3. What is the end date of the phase 1 contract? **30-June**
+
+4. What is the trigger of the phase 1 contract (mm)? What does this mean? **13mm:** *This means that there will only be a payout if rainfall is less than 13mm*
+
+5. What is the exit of the phase 1 contract (mm)? What does this mean? **7mm:** *This means that if there is less than 7mm of rainfall, there will be a full payout.*
+
+6. If the total rainfall during the contract window is 10mm, will there be a payout? If Yes, would this be a partial or full payout? **Yes (partial payout)**
+
+7. What is the maximum amount of rainfall that is counted for each dekad? **25mm**
+
+8. According to this example contract, how many phase 1 payouts would there have been in the last 15 years? **3**
+
+9. What years would have paid out for the 1st phase? **2000, 2004, 2009**
+
+10. Which year would have paid out the most?  What percentage of maximum payout? Why does the percent of maximum payout received change for different years? **2000, 97%:** *The percent of maximum payout received changes for different years because the rainfall would have been at different levels between the trigger and the exit.*
+
+

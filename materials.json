@@ -1,0 +1,13 @@
+var materials= {
+	"projects":[
+          {     
+            "id": "updated_educationalMat",
+            "name": "Weather Index Insurance Education",
+            "description": "Sample Materials",
+            "date": "2015",
+            "loc": "materials/updated_educationalMat/html/index_updated_educationalMat.html",
+            "document": "materials/updated_educationalMat/latex/updated_educationalMat.pdf"
+          }
+
+	]
+}
