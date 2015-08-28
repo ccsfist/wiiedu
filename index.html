@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+'<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -42,8 +42,8 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="http://iri.columbia.edu/our-expertise/financial-instruments/wiiedu/">About</a></li>
+            <li><a href="http://iri.columbia.edu/our-expertise/financial-instruments">Contact</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -56,7 +56,7 @@
         <h3 class="description"></h3>
         <p class="pdf"></p>
       </div>
-      <iframe id='material_contents' frameborder=0;></iframe>
+      <iframe id='material_contents' frameborder="0"></iframe>
     </div> <!-- /container -->
 
 
@@ -69,6 +69,7 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <!-- <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script> -->
     <script src="materials.json"></script>
+    <!-- <script src="js/iframe-resizer/js/iframeResizer.min.js"></script> -->
     <script type="text/javascript">
     	var getUrlParameter = function getUrlParameter(sParam) {
     		var sPageURL = decodeURIComponent(window.location.search.substring(1)),
@@ -87,6 +88,7 @@
 
     	$( document ).ready(function() {
     	
+		// $('iframe').iFrameResize( {checkOrigin:false} );
     		var m = getUrlParameter('m');
     		var project = materials.projects[0];
 			if (m != undefined) {
@@ -101,13 +103,22 @@
 				
 			}
 			
-			if (project != undefined)  {
+			if (project !== 'undefined')  {
+				var document_string = "";
+				
 				$( '#material_contents' ).attr( 'src', project.loc);
 				$( 'div.page-header h1' ).html(project.name);
-				$( 'div.page-header p.pdf' ).html('<a href="'+project.document+'">Load PDF</a>');
 				$( 'div.page-header h3' ).html(project.description);
+				
+				if (typeof project.documents !== 'undefined') {
+					document_string = "Related Documents: ";
+				
+					$.each(project.documents, function() {
+						document_string += '<a class="document" href="'+this.loc+'">'+this.name+'</a>';
+					});
+				}
+				$( 'div.page-header p.pdf' ).html(document_string);
 			}
-			
     		// var materials = materials.json
 //     		$.each(materials.projects, function(i) {
 //     			var project = this;
