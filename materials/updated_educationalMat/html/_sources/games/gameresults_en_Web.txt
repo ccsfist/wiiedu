@@ -1,6 +1,0 @@
-INDEX INSURANCE GAME: POSSIBLE GAME OUTCOMES
----------------------------------------------
-
-
-.. figure:: ../images/gameresults.png
-  :align: center
