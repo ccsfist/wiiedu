@@ -1,0 +1,262 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>1. Concepts Behind Index Design &mdash; Index Insurance Sample Educational Tools 2.0.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '2.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="Index Insurance Sample Educational Tools 2.0.0 documentation" href="../index_updated_educationalMat.html" />
+    <link rel="next" title="2. Checkpoint: Designing an Initial Weather Index By Hand" href="designingindexbyhand.html" />
+    <link rel="prev" title="1. Initial Visit Interaction to Determine the Worst Years" href="../games/initialvisitexercise_Ethiopia.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="designingindexbyhand.html" title="2. Checkpoint: Designing an Initial Weather Index By Hand"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../games/initialvisitexercise_Ethiopia.html" title="1. Initial Visit Interaction to Determine the Worst Years"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index_updated_educationalMat.html">updated_educationalMat</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="concepts-behind-index-design">
+<h1>1. Concepts Behind Index Design</h1>
+<div class="section" id="topic-setting-triggers-and-exits">
+<h2>1.1. Topic: Setting Triggers and Exits</h2>
+<div class="section" id="introduction">
+<h3>1.1.1. Introduction</h3>
+<p>The first two columns of the chart below show the amount of rainfall received during the end of the rainy season for 15 historic years. The second two columns begin to order the years by the amount of rainfall received, but have only been partially filled in. Using the information in this table, we will explore one way to set triggers and exits for an initial draft drought index that targets early cessation of the rainy season. This example is based on the R4 project, in Ethiopia.</p>
+<p>The method used below is called historical burn analysis, as it relies on the past to provide a key to what might occur in the future. Using this approach, it is assumed that the coming year will look like one of the years that has already occurred. Therefore, the historical years are used to determine an appropriate trigger and exit for next season&#8217;s index insurance contract. While this is a simplistic approach, it provides a starting point from which contracts can be further developed and refined.</p>
+<table border="1" class="docutils" id="id1">
+<caption><span class="caption-text">Setting Triggers and Exits Using Historical Burn Analysis</caption>
+<colgroup>
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Historical Year Rainfall (1995 - 2009)</th>
+<th class="head">&nbsp;</th>
+<th class="head">&nbsp;</th>
+<th class="head">Ordering Years by Rainfall Total</th>
+<th class="head">&nbsp;</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Year</td>
+<td>Index Window Adjusted Rainfall Total (mm)*</td>
+<td>&nbsp;</td>
+<td>Year</td>
+<td>Index Window Adjusted Rainfall Total (mm)*</td>
+</tr>
+<tr class="row-odd"><td>1995</td>
+<td>54.85</td>
+<td>&nbsp;</td>
+<td>2003</td>
+<td>79.31</td>
+</tr>
+<tr class="row-even"><td>1996</td>
+<td>74.42</td>
+<td>&nbsp;</td>
+<td>1998</td>
+<td>75.07</td>
+</tr>
+<tr class="row-odd"><td>1997</td>
+<td>26.57</td>
+<td>&nbsp;</td>
+<td>1996</td>
+<td>74.42</td>
+</tr>
+<tr class="row-even"><td>1998</td>
+<td>75.07</td>
+<td>&nbsp;</td>
+<td>2005</td>
+<td>66.26</td>
+</tr>
+<tr class="row-odd"><td>1999</td>
+<td>60.54</td>
+<td>&nbsp;</td>
+<td>2001</td>
+<td>62.6</td>
+</tr>
+<tr class="row-even"><td>2000</td>
+<td>54.76</td>
+<td>&nbsp;</td>
+<td>1999</td>
+<td>60.54</td>
+</tr>
+<tr class="row-odd"><td>2001</td>
+<td>62.6</td>
+<td>&nbsp;</td>
+<td>2006</td>
+<td>58.64</td>
+</tr>
+<tr class="row-even"><td>2002</td>
+<td>51.81</td>
+<td>&nbsp;</td>
+<td>2008</td>
+<td>57.49</td>
+</tr>
+<tr class="row-odd"><td>2003</td>
+<td>79.31</td>
+<td>&nbsp;</td>
+<td>1995</td>
+<td>54.85</td>
+</tr>
+<tr class="row-even"><td>2004</td>
+<td>31.84</td>
+<td>&nbsp;</td>
+<td>2000</td>
+<td>54.76</td>
+</tr>
+<tr class="row-odd"><td>2005</td>
+<td>66.26</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>2006</td>
+<td>58.64</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>2007</td>
+<td>53.36</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>2008</td>
+<td>57.49</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>2009</td>
+<td>49.68</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="checkpoint-setting-triggers-and-exits">
+<h2>1.2. Checkpoint: Setting Triggers and Exits</h2>
+<p><em>Note: Please use the following instructions to fill in the remaining spaces of the last two columns of the chart:</em></p>
+<ol class="arabic simple">
+<li>First, order the above years and corresponding rainfall totals by the amount of rainfall received. Start with the largest rainfall total at the top of the chart and end with the least amount of rainfall at the bottom. The first ten rows have already been filled in to expedite this task. Please fill in the remaining blanks.</li>
+<li>Draw a line separating the worst rainfall year from the years above. This line represents the Exit, or the point below which a complete payout is provided. In this initial draft index the Exit is designed so there is a full payout for the worst year in the past fifteen. Here, the Exit would be set to equal the worst year&#8217;s rainfall total rounded up to the nearest whole number.</li>
+<li>What is the Exit value for this contract? ________________________</li>
+<li>Assume we are interested in a contract that would payout four times in the past fifteen years.  Draw a dotted line separating the worst four rainfall years from the years above. This line represents the Trigger for a contract that would payout four times in the past fifteen years. The first three years below this line would have resulted in partial payouts, while the worst year would have resulted in a full payout. For this initial draft index, the Trigger would be approximately halfway between the fourth and fifth worst years.</li>
+<li>Choose a value to Trigger the contract: ____________________________</li>
+</ol>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index_updated_educationalMat.html">
+              <img class="logo" src="../_static/iri.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../index_updated_educationalMat.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">1. Concepts Behind Index Design</a><ul>
+<li><a class="reference internal" href="#topic-setting-triggers-and-exits">1.1. Topic: Setting Triggers and Exits</a><ul>
+<li><a class="reference internal" href="#introduction">1.1.1. Introduction</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#checkpoint-setting-triggers-and-exits">1.2. Checkpoint: Setting Triggers and Exits</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../games/initialvisitexercise_Ethiopia.html"
+                        title="previous chapter">1. Initial Visit Interaction to Determine the Worst Years</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="designingindexbyhand.html"
+                        title="next chapter">2. Checkpoint: Designing an Initial Weather Index By Hand</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/whatisindexinsurance/conceptsbehindindexdesign_en_Web.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="designingindexbyhand.html" title="2. Checkpoint: Designing an Initial Weather Index By Hand"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../games/initialvisitexercise_Ethiopia.html" title="1. Initial Visit Interaction to Determine the Worst Years"
+             >previous</a> |</li>
+        <li><a href="../index_updated_educationalMat.html">updated_educationalMat</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2015, International Research Institute for Climate and Society, Columbia University, New York, USA.
+    </div>
+  </body>
+</html>

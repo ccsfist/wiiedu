@@ -1,0 +1,440 @@
+WIIET Exercise 3: Moving from Initial Pricing to Market Pricing
+================================================================
+
+Topic: Moving from Initial Pricing to Market Pricing 
+--------------------------------------------------------
+
+Introduction
+~~~~~~~~~~~~~~~~~
+
+This exercise illustrates the types of considerations that go into the index insurance pricing process. Participants will take on the role of the insurer/reinsurer. You will use historical rainfall data to calculate a historical risk price in WIIET, as a starting point for determining an appropriate market price of an index. Next, the historical rainfall data will be used to create a simulated rainfall dataset, as well as datasets that represent different climate scenarios. You will then calculate the risk price of these scenarios to see the range of risk prices that result. This analysis will help you get a better sense for the additional amount of uncertainty that should be added to your historical risk price. The exercise concludes by guiding you through combining your historical risk price, additional loading due to uncertainty, and administrative and business expenses to arrive at a final market price.
+
+This Exercise has four Segments:
+
+Segment 1: Advanced Statistical Analysis 
+
+Segment 2: Sensitivity Tests 
+
+Segment 3: Factoring in Uncertainty 
+
+Segment 4: Moving from Risk Pricing to Market Pricing: using spreadsheets
+
+*This module uses hypothetical indices and datasets. However, it is based on rainfall data and modified versions of the indices from the R4 project, in Ethiopia.*
+
+*When you are covering multiple indices their payouts average together, which makes it possible to lower the price of insurance. The portfolio analysis that is used to calculate this approach is beyond the scope of this exercise.*
+
+**WIIET:** *You can log on to WIIET by navigating to the following Web page:* http://iri.columbia.edu/wiiet. If you would like further clarification or a more detailed description of the WIIET terms and tools, please refer to the *User Guide* or *Glossary.* Both can be found by clicking on their respective icons on any of the WIIET pages.
+
+As stated previously, it is ideal to complete WIIET activities using the Firefox browser. The tool is designed to work with other browsers, however you may encounter some occasional "bugs" in the system. We are currently working to fix these kinks and have included work-arounds in this material. For example, depending on your specific browser, you may need to reload the page or return to the main menu so saved datasets are visible for future activities.
+
+
+Exercise Overview
+~~~~~~~~~~~~~~~~~~~
+
+**Background Information:** In WIIET Exercise II: Influence of Short Datasets on Prices, you explored how the increased uncertainty characteristic of shorter datasets leads to increased insurance prices. You did this by pricing contracts using a shortened dataset and a longer historical dataset, and then comparing your results. It also helped you begin to explore the trade-offs between historical burn analysis and using simulated rainfall. This pricing module is intended to follow and build upon WIIET Exercise II.
+  
+**Overview of important terms:**
+
+*Historical burn analysis* uses historical data to design and evaluate a contract. One of the greatest benefits of historical burn analysis is it is extremely transparent and can be easily communicated to stakeholders. Although useful, when applied without other analyses this approach has limitations; it sole relies on past events to determine the probability distribution of the indexed parameter. As a result, too much weight may be placed on a select few events in the historical record, while other possible events that have not occurred in the historical dataset will not be accounted for. This becomes even more limiting when you have a short historical dataset from which to reference.
+
+On the other hand, *simulated rainfall* expands upon the information provided by the historical rainfall dataset to provide a fuller picture of the rainfall events that may occur in the future.  
+
+*Risk Pricing:* The intent of the risk price is to allow the designer to model risk protection and insurance cost tradeoffs sufficiently to make quality design decisions. The risk price provided in WIIET is a working price for design purposes and is likely to be somewhat different than the final price of a transacted contract. 
+
+The risk component of the price of insurance accounts for the amount of money necessary to cover any insurance payouts that may occur. The risk price is comprised of two parts: 1) the average payout. For example, the insurance premium must be sufficient to cover the average amount of money being paid out. If $100 is paid by the insurance about 1/10 of the time, the premium must be at least $10. 2) The liquidity necessary to cover extreme payouts; the insurance companies must be prepared to cover extreme events.  
+
+The Risk Price is determined using the following formula:
+Risk Price = Average payout including zero payout years + cost of capital * (Maximum Payout - average payout)
+
+*In WIIET "cost of capital" is labeled "loading"*
+
+In WIIET the Risk Price is called "Premium in Cash".
+
+While the risk price is a starting point for determining the price of an insurance contract, it does not account for all that needs to be included in a contract's price.  This exercise will help you understand some of the other factors you need to take into account when designing an index insurance contract and evaluating its price. The actual price of the insurance will, in general, be higher than the risk prices you calculate in WIIET, due to these additional costs.
+
+
+Task 1: Setup - Index Parameters
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Throughout this exercise we will be using the same index parameters in each Task. You can always navigate back to your saved parameters by navigating the "saved parameter sets" in the drop down menu under each module. Tasks 1, 2 and 3 are similar to the steps preformed in WIIET Exercise II, but are necessary to include here, as they will serve as the basis for our analysis moving forward. While these initial tasks may appear redundant they contain more advanced discussions that will be important throughout this exercise. Please, read over each tasks even if it looks familiar.
+
+In order to start this Educational Exercise and set up your parameters, follow the steps below:
+
+1. **Access the WIIET tool by navigating to** http://iri.columbia.edu/wiiet. Use the username and password you were provided.
+
+2. **If you have completed Exercise I or II and saved your results:** you do not have to repeat the setup steps below. Your index parameters should already be saved as "original" and you can skip to Task II. However, it may be helpful to read over these steps to refresh your memory.
+
+3. Work in **Create Contracts:** (The definitions for the terms used here are provided in Exercises I and II, as well as in the WIIET Glossary): 
+   
+   - Go to **create contract** module on the left hand side of the page
+   
+   - Click on **Example Satellite Precipitation** in the *Step 1* window on the left, to select that rainfall dataset
+   
+   - In the *Step 2* window it asks "When would you like the contract to begin?" Click on **Contract Start Dekad** and set the contract start dekad as: 11-Aug
+   
+   - *Length of Contract Period:* select **7** dekads
+   
+   - At the bottom of the *Step 2* box there is a matrix referring to *phases* covered. Click on the remove phase button until you have only **Phase 1.** Next, make sure each of the circles in that phase are blue by clicking on them.
+   
+   - Under *Step 3* you can set the *Dekadal Cap* to **25**
+   
+   - On the bottom most table set the *Trigger* to **82** 
+   
+   - Set the *Exit* to **60**
+   
+   - Set the *liability* for the phase to **100**
+   
+   - Set the *Maximum liability* to **100**
+   
+   - Now you are ready to **Run Simulation:** Click on the bottom right side of the page.
+   
+   - Once you get these results, click on **'save parameters'**, in blue on the left hand side of the screen. Use the name: **"original"**, and description **"original index"**. Then click **save.** Then click **close.**
+   
+   - This generates payouts for the index using the historical rainfall data.
+
+Task 2: Pricing of Historical Rainfall Dataset
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In this task you will start with 15 years of historical rainfall data (**"Example Satellite Precipitation"**) and use the "original index" parameters to calculate the price of the historical burn index in WIIET. We will call this the historical risk price.
+
+To calculate this price, follow the below steps: 
+
+1. Navigate to the Pricing Module by using the tabs at the top of your screen.  
+
+2. Click on "original" in the Payout Data Series window of Step 1.  This selects the payouts you calculated for the original index using the historical rainfall.
+
+3. **If you have completed Exercise II and saved your results:** select "original" from the Pricing Parameters window. This will ensure we are using the same set of pricing parameters that were created in Exercise II for each of our pricing tests. The set up of these parameters are explained below in steps 4 through 8, if you would like to refresh your memory. Next click on "run" on the bottom right to see the results. You do not need to repeat steps 4 through 8.
+
+4. Set the *Maximum Liability* to **100.** This is the total amount of money insured, $100 across all phases. This is to reflect the amount you set when you create the contract.  
+
+5. Set the *Value at Risk* to **1.** This tells the pricing software that the money to hold should be enough to pay the entire maximum liability.
+
+6. Set the *Loading* (cost of capital) to **0.10.**  This means that the insurance company must pay ten percent of the money it needs to have available to honor large payouts.
+
+7. Click on "run" on the bottom right to see the results.  
+
+8. Save your pricing parameters under the title "original"
+
+Interpreting Your Results: The *Maximum Payout* is the largest payout that occurred in the dataset. For this exercise, the maximum possible payout is set to be 100 to enable you to think of payout values as a percentage. The risk price is presented in two ways: 1) *Premium in Cash* and 2) *Premium as percentage of sum insured.* The *Premium in Cash* is the amount of money that will be charged for active insurance coverage based on the risk price formula. Since the maximum payout is $100, the *Premium as percentage of sum insured* will be identical to the *Premium in Cash* value.  
+
+**Questions:**
+
+1. What is the historical risk price ("premium in cash")?__________________________
+
+2. How many payouts occur using the historical rainfall dataset?____________________  
+
+3. What is the average payout?________________________________________________________
+
+4. Does the maximum possible payout occur when using this dataset?___________
+
+5. Why is the historical risk price higher than the average payout?______________________
+
+6. What is the payout variability?_______________________________________
+
+**Discussion:**
+
+The historical burn price assumes that the only things that are possible for the coming year is exactly events that happened in the past historical dataset. Of course we know other things are possible, so we need to make sure we are anticipating those realistically. Perhaps the most challenging aspect of pricing insurance is determining the additional cost necessary to make sure the index responsibly captures uncertainties in the data and climate. In the next three Segments we will try to get an accurate picture of what this additional level of uncertainty might be.
+
+There are two primary ways that insurance and reinsurance companies do this: 
+
+   1. Advanced statistical analysis (Segment 1)
+   
+   2. Sensitivity tests (Segment 2)
+
+
+Segment 1: Advanced Statistical Analysis
+-------------------------------------------
+
+Advanced statistical analysis involves fitting available data to a statistical model in order to get a better understanding of the underlying statistical properties. By working with the statistical model, we are able to generate a more comprehensive dataset that includes events that have not occurred in the historical record, but that are likely to occur in the future, given what we know about the statistical properties of the historical data. We are also able to account for the limited information inherent in having a short dataset, by adding additional uncertainty into the model.  
+
+For these reasons, a dataset produced by a statistical model provides a good robustness test for our index. In other words, if the statistical analysis yields very different results than our historical burn analysis, it means our index may be too closely fit to the historical dataset and not adequately accounting for the full uncertainty we face. If the statistical analysis has results that are very similar to our historical burn analysis, this is a good first indicator that we have designed a robust index capable of addressing the nature of our risk. 
+
+The benefit to using a statistical model is it provides a systematic approach for analyzing data that can be repeated for new locations or as new information becomes available. Using such a systematic approach also lends itself to documentation that can be presented and explained to stakeholders, even if the concepts presented are less straightforward than the historical burn approach.
+
+However, any model comes with its own set of limitations. By its very nature, a model is a simplification of real-world scenarios. Each statistical model is built to account for certain types of problems. To do this, the model must incorporate certain assumptions that may not always hold true in the real world. In a simplified world, where all the model's assumptions hold true, the price garnered from the statistical analysis would be the correct price for the insurance package.  
+
+**Questions:**
+
+1. Why do statistical models provide a good robustness test for our index? ______________
+
+2. What are the benefits of using statistical models in the pricing process? _______________
+
+3. What are the limitations of using advanced statistical analysis as a pricing method? _______________
+
+4. In what scenario would a statistical model provide the correct price for an insurance package? _______________
+
+
+
+Task 3: Simulated Rainfall 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In this task, we will use a rainfall simulator, a statistical model embedded in WIIET that was designed with index insurance development purposes in mind, to do a robustness check of the index. This task will give you the opportunity to carry out an advanced statistical analysis for your original contract. While it is possible for you to generate a dataset using the rainfall simulator yourself, for the sake of conserving time and ensuring each participant has an identical dataset, we have already done this step for you. The simulated rainfall dataset is available in your dataset menu in the Step 1 window. This is the same simulated rainfall dataset that is used in Exercise II.
+
+To create a set of payouts using this simulated rainfall dataset and the "original" index parameters, please follow the instructions below **(If you have completed Exercise II and saved your results: you do not have to complete steps 1 through 6. Your payout data series using the simulated rainfall and the original index should already be saved as "fullsimulation-original"):**
+
+
+1. Go to **create contract** module on the left hand side of the page
+
+2. Click on **Full Dataset Simulated Rainfall** in the *Step 1* window on the left to select the new, simulated rainfall dataset
+
+3. In the *Saved Parameter Sets* window click on original, the index you have already created (and also used for Exercise I and II). 
+
+4. Now you are ready to **Run Simulation:** Click on the bottom right side of the page
+
+5. The simulation will take longer this time, because it is processing about a thousand years of data. The payout year table and figure will now have about a thousand elements, with the simulation years beginning with year 1.
+
+6. Once you get these results, click on **'save parameters'** in blue on the left hand side of the screen.  Use the name: **"fullsimulation-original",** and description **"simulation using historical dataset, original index".** Then click **save.** Then click **close.**
+
+**You will now price this index using the Pricing Module. To do this, follow the steps below:**
+
+1. Navigate to the Pricing Module by using the tabs at the top of your screen.  
+
+2. Click on "fullsimulation-original" in the Payout Data Series window of Step 1.  This selects the payouts you calculated for the original index using the simulated rainfall dataset.
+
+3. Select "original" from the Pricing Parameters window.  This will ensure we are using the same set of pricing parameters for each of our pricing tests.
+
+4. Click on "run" on the bottom right to see the results.  
+
+**Questions:**
+
+1. What is the simulated rainfall risk price? _______________
+
+2. Is this higher or lower than the historical risk price calculated above? _____________
+
+3. What is the average payout? _______________
+
+4. Does the average payout increase or decrease compared to the historical burn index? _______________
+
+5. What is the payout variability? _______________
+
+6. Does the payout variability increase or decrease compared to the historical burn index? _______________
+
+7. Using just this analysis, do these results indicate that your historical burn index is robust? _______________
+
+
+
+Segment 2: Sensitivity Tests
+------------------------------
+
+By using statistical analysis, insurance and reinsurance companies can get a sense of what events are likely to occur in the real world and are given an idea of an appropriate price for the insurance. But since every statistical model has its limitations, it is important that we incorporate other forms of analysis into our pricing process to explore some of the possibilities that may lie outside of the model's scope. One way of doing this is through sensitivity tests, which we will explore in this section.
+
+Sensitivity tests can be used to supply additional information about how dependent the index we've developed (and its price) is on the specific dataset we used in our design process. These tests involve applying a given index to a slightly altered dataset to see if the adjustments result in any changes to the price of the index. Usually these tests will reflect events that there is reason to believe will occur in the coming year. So, if climate scientists or farmers have noticed a shift in the length or timing of an area's rainy season and suspect it may continue, it would make sense to apply the index parameters to rainfall datasets that reflect the shift and see what happens.  
+
+Sensitivity tests help us determine if we've over-fit our index to our data.  If the performance and price of an index does not change much as you apply these tests then the index is fairly robust. However, if the outputs change significantly than you may want to see how you can improve the index to make it more robust. 
+
+In this section we will perform three sensitivity tests. These tests are not particularly sophisticated, and they do not inform you of exactly what you need to change in order to create a robust index. However, they are able to reflect several kinds of issues likely to affect your index price and give you a sense of how vulnerable your index is to such changes, no matter what the cause. In the following tasks you will see how vulnerable the index is to slightly less rainfall on average, or the rainy season occurring slightly earlier or later than would be expected.   
+
+**Questions:**
+
+1. Why do insurance and reinsurance companies perform sensitivity tests? _______________
+
+2. What does it tell you if the price of your index changes dramatically when you perform a sensitivity test? _______________
+
+3. How does a robust index perform under sensitivity tests _______________
+
+
+
+Task 4:  Determining Sensitivity to a General Decrease in Rainfall
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Is the index price sensitive to a general decrease in rainfall?
+
+To answer this question, you will price the original index parameters using a dataset that has five percent less rainfall than the historical record. For your convenience, this dataset has already been uploaded into the database for use in this exercise. Before you can price the contract, you will need to create payouts for this dataset. 
+
+**Follow the instructions below to do so.**
+
+1. Navigate to the **create contract** module using the tabs at the top of the page
+
+2. Click on **Pricing Activity 5 percent less** in the *Step 1* window on the left.  This dataset is a tweaked version of the satellite data you worked with in your initial task. It has been altered to make the rainfall five percent lower than what was observed by the satellite.
+
+3. In the *Saved Parameter Sets* window click on **original,** the same contract you used to evaluate the historical and simulated datasets.
+
+4. Now you are ready to **Run Simulation:** Click on the bottom right side of the page
+
+5. Once you get these results, click on **'save parameters'** in blue on the left hand side of the screen.  Use the name: **"decreasedrainfall-original",** and description **"historical dataset decreased by five percent, original index".** Then click **save.** Then click **close.**
+
+**Now you will price the contract using the set of payouts you have just calculated.  Do this by following the steps below.**
+
+1. Navigate to the **pricing** module by using the tabs at the top of your screen.  
+
+2. Click on "decreasedrainfall-original" in the Payout Data Series window of Step 1.  This selects the payouts you just calculated for the original index using the dataset with the five percent lower rainfall.
+
+3. Select "original" from the Pricing Parameters window. This will ensure we are using the same set of pricing parameters for each of our pricing tests.
+
+4. Click on "run" on the bottom right to see the results.  
+
+**Questions:**
+
+1. What is the risk price for the five percent less rainfall? _______________ 
+
+2. Is this higher or lower than the historical burn risk price? The simulated rainfall risk price? _______________
+
+3. How much did your average payout, number of payouts and payout variability change as compared to using the historical rainfall?  The simulated rainfall? _______________
+
+4. What does this tell you about your index's sensitivity to decreased rainfall? _______________
+
+
+Task 5: Determining Sensitivity to a Shift Forward in the Rainy Season 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Is the index price sensitive to the rainy season ending earlier?
+
+To test this, you will price the original index parameters using another variation of the historical rainfall data; this data has been altered so that you are effectively starting and ending the rainy season one day earlier. While this may not sound like a significant change, because you are doing this to all the years you are changing the climate dramatically. This dataset is also provided in your dataset menu for the convenience of carrying out this exercise.  **Use the directions below to guide you through calculating payouts for this dataset.**
+
+1. Return to the **create contract** module using the tabs at the top of the page
+
+2. Click on **Pricing Activity 1 day fwd** in the *Step 1* window on the left.  This dataset is an altered version of the satellite data you worked with in your initial task. In this dataset each year's rainy season begins and ends one day earlier than was the case in the historical record.
+
+3. In the *Saved Parameter Sets* window click on **original,** the same contract you used to evaluate the historical and simulated datasets.
+
+4. Now you are ready to **Run Simulation:** Click on the bottom right side of the page
+
+5. Once you get these results, click on **'save parameters.'** Use the name: **"earlyrainyseason-original",** and description **"historical dataset shifted 1 day forward, original index".** Click **save,** then **close.**
+
+**Now you will price the contract using the set of payouts you have just calculated.  Do this by following the steps below.**
+
+1. Navigate to the **pricing** module using the tabs at the top of your screen.  
+
+2. Click on "earlyrainyseason-original" in the Payout Data Series window of Step 1.  This selects the payouts you just calculated for the original index using the dataset with the rainfall moved one day forward.
+
+3. Select "original" from the Pricing Parameters window.  This will ensure we are using the same set of pricing parameters for each of our pricing tests.
+
+4. Click "run" to see the results.  
+
+**Questions:**
+
+1. What is the risk price when the rainy season is shifted forward by one day? _______________
+
+2. Is this higher or lower than the historical burn risk price? The simulated rainfall risk price? _______________
+
+3. How much did your average payout, number of payouts and payout variability change as compared to using the historical rainfall?  The simulated rainfall? _______________
+
+4. What does this tell you about your index's sensitivity to a shift forward in the rainy season? _______________
+
+Task 6: Determining Sensitivity to a Shift to a Later Rainy Season 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Is the index price sensitive to the rainy season ending later?
+
+For our last sensitivity test, you will explore the contract's vulnerability to a shift to a later rainy season; one that begins and ends one day later in the year. Similar to the previous exercise, we will do this by tweaking the historical dataset. Again, to simplify things, this dataset has been created for you and is available in your selection menus. **You will now need to create payouts for the original index using this dataset by following the steps below.**
+
+1. Go back to the **create contract** module using the tabs at the top of the page
+
+2. Click on **Pricing Activity 1** day bck in the *Step 1* window on the left.  This dataset is an altered version of the satellite data you worked with in your initial task. In this dataset each year's rainy season begins and ends one day later than was the case in the historical record.
+
+3. In the *Saved Parameter Sets* window click on **original,** the same contract you used to evaluate the historical and simulated datasets.
+
+4. Now you are ready to **Run Simulation:** Click on the bottom right side of the page
+
+5. Once you get these results, click on **'save parameters.'** Use the name: **"laterainyseason-original",** and description **"historical dataset shifted 1 day backward, original index".** Click **save,** then **close.**
+
+**Now you will price the contract using the set of payouts you have just calculated. Do this by following the steps below.**
+
+1. Navigate to the **pricing** module using the tabs at the top of your screen.  
+
+2. Click on "laterainyseason-original" in the Payout Data Series window.  This selects the payouts you just calculated for the original index using the dataset with the rainfall moved one day backward.
+
+3. Select "original" from the Pricing Parameters window.  This will ensure we are using the same set of pricing parameters for each of our pricing tests.
+
+4. To see the results, click "run" 
+
+
+**Questions:**
+
+1. What is the risk price when the rainy season is shifted back by one day? _______________
+
+2. Is this higher or lower than the historical burn risk price? The simulated rainfall risk price? _______________
+
+3. How much did your average payout, number of payouts and payout variability change as compared to using the historical rainfall?  The simulated rainfall? _______________
+
+4. What does this tell you about your index's sensitivity to a shift to a later rainy season? _______________
+
+Segment 3: Factoring in Uncertainty 
+-------------------------------------
+
+
+The information you glean from the three sensitivity tests can be used to compliment the advanced statistical analysis (rainfall simulator). After you get a sense of the contract's vulnerability to various sources of climate uncertainty and have assessed it using the statistical model, it is your professional responsibility to add a safety factor in the pricing based on the dangers you see.
+
+Task 7: Discussion of uncertainty
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+With your group discuss and summarize how our index reacted to the statistical analysis and sensitivity tests. Record which scenario led to the largest increase in risk price compared to the historical burn risk price. In which scenario was the price least affected? Discuss what types of situations might the index capture well and when might this index perform poorly.
+
+In the next section you will work to calculate a final market price. The above discussion will help inform what value you should assign to Additional Loading Due to Uncertainty, which is one component that goes into the calculation. 
+
+Segment 4: Moving from Risk Pricing to Market Pricing: using spreadsheets
+----------------------------------------------------------------------------
+
+In this segment you will be using a new tool: spreadsheets in Excel (*to access the spreadsheet click on the following link:* http://iri.columbia.edu/education/index/exercises/pricingspreadsheet1.xls). You will be using the spreadsheet to build on the risk price calculated in WIIET and factor in additional pricing components that you may want to consider (such as the *Additional Loading Due to Uncertainty* discussed above). You will need to set up the spreadsheet to replicate the index that you have been working with in WIIET. Some of this has already been set up for you. 
+
+The spreadsheet has already been created for you and uploaded with the necessary rainfall data. This rainfall data corresponds to the 15-year historical rainfall data that you have been using in WIIET so far for this exercise. When you open the spreadsheet you will notice that there are three workbooks. These workbooks are labeled on the bottom left of the page: 1. Controls, 2. HistoricalDailyRainfall, and 3. HistoricalDekadalRainfall. In this exercise we will only be using the Controls aspect of this spreadsheet. The latter two workbooks contain the historical rainfall information.
+
+In the Controls workbook, you will notice that some boxes are labeled in green. These are the *only*boxes that you need to adjust in this spreadsheet!*
+
+Task 8: Setting up the spreadsheet for your index
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Here we will set up the spreadsheet to reflect the "original index" parameters that you used in WIIET. Remember:
+   - The index window begins on August 11 
+   
+   - *Length of Contract Period* is **7** dekads
+   
+   - The *Trigger* is **82**
+   
+   - The *Exit* is **60**
+
+**Use this information to fill in the Start Dekad, End Dekad, Trigger and Exit. In addition, enter the contract name as " Original Index".** As you enter each piece of information you will need to hit **ENTER** on your keyboard for the information to be recorded in Excel. *You were given the date of the year for the beginning of the index window, not the dekad that the window starts. Use the dekad converter below to find the corresponding start and end dekad and make sure these are the numbers that you enter into the spreadsheet.*
+
+.. csv-table::
+   :file: ../csv/dekal.csv
+   :header-rows: 1
+   
+
+Task 9: Determining Pricing Parameters
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+For this task, you will work with your group to assign values to the pricing parameters that determine the final market price of the index. These factors include: *(Note that all the pricing parameters and values are given in percentages. These numbers are given in terms of the maximum payout that a farmer can receive.)*
+
+1. Cost of Capital: The *cost of capital* is the same parameter as *loading* in WIIET. Since we set this to 0.10 when we ran the pricing module in WIIET, we will once again set it to 0.10. However, in the spreadsheet we must convert this number into a percentage, so **enter 10%.** This means that the insurance company must pay ten percent of the money it needs to have available to honor large payouts. This value is only for instructional purposes and in fact is probably on the higher end of the spectrum. In reality a more realistic range would be between 0.05 and 0.07.
+
+2. Administrative and Business Expenses: For this exercise, pretend you work in a company that wants to **set the administrative and business expenses to 3%.**
+
+3. Additional Loading Due to Uncertainty: You should use your group discussion from Section 3 to help you decide on an appropriate *additional loading due to uncertainty.* The *uncertainty* plus the historical burn risk pricing should reasonably reflect the range of risk prices that you have seen in your risk pricing analysis calculations. If you found that the sensitivity test risk prices and the simulated rainfall risk price were significantly higher than the historical risk price, you will want to capture this difference in the *additional loading due to uncertainty* value. **This will effectively raise your final market price. You will want to experiment with a few values here and look at the outputs in the Pricing Results (explained below) before settling on your final parameter.**
+
+4. Maximum Loss: The *maximum loss* is not a control option on this spreadsheet, but it is a pricing parameter. This is equal to the *maximum liability* in WIIET, which you also set to 100. This is the total amount of money insured, $100 across all phases. This is to reflect the amount you set when you create the index.  
+
+In the spreadsheet, as you adjust the *Contract and Pricing Parameters* you can see how the two boxes under the blue *Results* heading change in real time. The first box on the left shows payouts. This will only be affected by changes in the *Contact Parameters.* Both the *Contract and Pricing Parameters* affect the *Pricing Results,* the Results box on the right. The outputs of this box are explained here:
+
+**Average Payout:**
+   This is the first component of the *risk price formula* 
+
+**Risk Loading:**
+   This is the second component of the *risk price formula.*
+   
+**Risk Price:**
+   This is the same as the *risk price* that you have been working with in WIIET. Since you are using the same index parameters and the historical rainfall information, this number should be about the same as the *historical burn risk price* you calculated in WIIET. The spreadsheet calculates the *risk price* to provide a starting point for determining a final market price. It adds the *average payout* and *risk loading* to calculate the *risk price.* Once again the formula for this calculation is: 
+
+Risk Price = (Average payout including zero payout years + cost of capital) * (Maximum Payout - Average payout)
+
+**Administrative and Business Expenses:**
+  This is exactly the number that you entered in the *pricing parameters.*
+
+**Additional Loading Due to Uncertainty:**
+  This is exactly the number that you entered in the *pricing parameters.*
+
+**Market Price:**
+  This is calculated by adding the *risk price, administrative and business expenses, and additional loading due to uncertainty.* This is your final price.  
+
+**If you haven't done so already, enter the pricing parameters and experiment with your additional loading due to uncertainty.**
+
+**Questions:**
+
+1. What is your final value for the additional loading due to uncertainty? _______________
+
+2. What is your final market price? _______________
+
+3. What three values does the spreadsheet add together to calculate the final market price? _______________
+
+
+
+

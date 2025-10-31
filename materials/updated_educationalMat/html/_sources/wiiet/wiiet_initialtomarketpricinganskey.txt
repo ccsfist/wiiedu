@@ -1,0 +1,117 @@
+WIIET Exercise 3 Answer Key: Moving from Initial Pricing to Market Pricing
+=============================================================================
+
+Task 2: Pricing of Historical Rainfall Dataset
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**Answers:**
+
+1. What is the historical risk price ("premium in cash")? **24.72**
+
+2. How many payouts occur using the historical rainfall dataset? **5**
+
+3. What is the average payout? **16.83**
+
+4. Does the maximum possible payout occur when using this dataset? **No.**
+
+5. Why is the historical risk price higher than the average payout?  **Because enough money must also be held to account for extreme payouts.**
+
+6. What is the payout variability? **1165.31**
+
+Segment 1: Advanced Statistical Analysis
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**Answers:**
+
+1. Why do statistical models provide a good robustness test for our index? **They elaborate on the uncertainty inherent in the historical dataset. This allows us to test if we've fit our index too closely to the historical dataset.**
+
+2. What are the benefits of using statistical models in the pricing process? **They provide a systematic approach for analysis and can be clearly documented.**
+
+3. What are the limitations of using advanced statistical analysis as a pricing method? **The results of this analysis will only be as good as the model. Every model has its limitations and cannot account for every scenario that may happen in actuality.**
+
+4. In what scenario would a statistical model provide the correct price for an insurance package? **In a world where all the models assumptions were true, the model would provide the correct price of insurance.**
+
+Task 3: Simulated Rainfall 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**Answers**
+
+1. What is the simulated rainfall risk price? **27.24**
+
+2. Is this higher or lower than the historical risk price calculated above? 
+**Higher**
+
+3. What is the average payout? **19.16**
+
+4. Does the average payout increase or decrease compared to the historical burn index? **Increase**
+
+5. What is the payout variability? **1095.79**
+
+6. Does the payout variability increase or decrease compared to the historical burn index? **Decrease**
+
+7. Using just this analysis, do these results indicate that your historical burn index is robust? **Based on just this analysis, most likely this is a fairly robust index. It does not appear to have been over fitted to the 15 years of historical data, as the pricing results are similar to those seen for the historical burn analysis. However, this is an opinion-based question and there is no right answer. Each person/stakeholder may have a different opinion as to how much variation is acceptable, appropriate and within their range of comfort.**
+
+Segment 2: Sensitivity Tests
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**Answers:**
+
+1. Why do insurance and reinsurance companies perform sensitivity tests? **To provide additional robustness tests for insurance contracts.**
+
+2. What does it tell you if the price of your index changes dramatically when you perform a sensitivity test? **That your contract is probably not as robust as it needs to be.  This typically reflects that the contract has been designed too closely to fit the data used in the initial design process.**
+
+3. How does a robust index perform under sensitivity tests? **The price, payout frequency, payout variability and average payout may vary slightly, but will still be within a reasonable range of the results you had using your original dataset.**
+
+Task 4:  Determining Sensitivity to a General Decrease in Rainfall
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**Answers:**
+
+1. What is the risk price for the five percent less rainfall?  **27.10**
+
+2. Is this higher or lower than the historical burn risk price? The simulated rainfall risk price? **Higher; Lower, but about the same.**
+
+3. How much did your average payout, number of payouts and payout variability change as compared to using the historical rainfall?  **The simulated rainfall? As compared to the historical rainfall: The average payout increased by 2.17, the number of payouts increased by one, and the payout variability increased by 194.13. As compared to the simulated rainfall: The average payout decreased by 0.16, the payout rate is 3.33 percent higher than when using the simulated rainfall, and the payout variability is 263.65 higher.**
+
+4. What does this tell you about your index's sensitivity to decreased rainfall? **Again, this is an opinion-based question and it will depend on how tolerant you are to the risk price being raised a few percentage points and other variations. Overall these results are still very similar to the results we saw when using the historical and simulated rainfall, and it is most likely that the index is not particularly sensitive to this type of overall decrease in rainfall.**  
+
+Task 5: Determining Sensitivity to a Shift Forward in the Rainy Season
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**Answers:**
+
+1. What is the risk price when the rainy season is shifted forward by one day? **28.36**
+
+2. Is this higher or lower than the historical burn risk price? The simulated rainfall risk price? **Higher; higher**
+
+3. How much did your average payout, number of payouts and payout variability change as compared to using the historical rainfall? **The simulated rainfall? As compared to historical rainfall: The average payout increased by 3.57, the number of payouts increased by 1, and the payout variability increased by 143.26.  As compared to simulated rainfall: The average payout increased by 1.24, the payout rate is 3.33 percent higher than when using the simulated rainfall, and the payout variability increased by 212.78.**
+
+4. What does this tell you about your index's sensitivity to a shift forward in the rainy season? **So far our contract appears to be the most sensitive to a shift forward in the rainy season, however we still only see an increase of a few percentage points in the risk price. This analysis does not reveal any severe danger signs, but because the index was the most sensitive to this shift you may want to be cautious and aware of this as you move forward. As this is an opinion-based question, others may not be as comfortable with this amount of variation and feel that it may be cause for concern, possibly calling for adjustments to be made to address this risk. The reason that this sensitivity check has resulted in the largest impact is because you are effectively adding an additional dry day to every season and removing what is probably a wet day.**
+
+Task 6: Determining Sensitivity to a Shift to a Later Rainy Season 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**Answers:**
+
+1. What is the risk price when the rainy season is shifted back by one day? **19.62**
+
+2. Is this higher or lower than the historical burn risk price? The simulated rainfall risk price? **Lower, lower.**
+
+3. How much did your average payout, number of payouts and payout variability change as compared to using the historical rainfall?  The simulated rainfall? **As compared to historical rainfall: the average payout is 3.05 lower, there is the same number of payouts, the payout variance is 431.36 less. As compared to simulated rainfall: The average payout is 5.38 lower, the payout pays out about 3.34% less frequently, and the payout variance is 361.84 lower.**
+
+4. What does this tell you about your index's sensitivity to a shift to a later rainy season? **That this risk is not likely to affect the contract's performance, and is probably not a concern we need to worry about.** 
+
+Segment 4: Moving from Risk Pricing to Market Pricing: using spreadsheets
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Task 9: Determining Pricing Parameters
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**Answers:**
+
+1. What is your final value for the additional loading due to uncertainty? **Results will vary by participant-there is really no correct answer here and many considerations**
+
+2. What is your final market price? **Again, results will vary by participant**
+
+3. What three values does the spreadsheet add together to calculate the final market price? **The Risk Price (25%), Administrative and Business Expenses (3%), and Additional Loading Due to Uncertainty**
+

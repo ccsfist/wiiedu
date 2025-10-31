@@ -1,0 +1,149 @@
+OVERVIEW GAME INSTRUCTIONS
+============================
+
+Objective 
+-----------
+
+This game is designed to illustrate how the decision to purchase index insurance can relate to a farmer’s input decisions for a planting season.
+
+In this game, you are a farmer who is making input decisions for the upcoming season.  You start every phase of the game with no savings. There will be three main choices you will make before the planting season begins: what type of seed to use, to purchase insurance, and to participate in a community cooperative. 
+
+You will make these decisions before you know whether the upcoming season will be "normal" or "bad". A normal season will have sufficient rainfall to support your crop growth.  A bad season is one with low rainfall, causing drought. There is a 1-in-5 year risk of drought; in one out of every five years, you are likely to have a bad season. In order to explore all the possible outcomes, participants will play the game for several rounds. **In each round you will play the same year, you will not playing consecutive years.** The type of season is determined in Stage 2 of the game, after you have made your decisions in Stage 1.  In Stage 3 of the game, we determine your results, based on the decisions you made, and the type of season that occurred.
+
+The facilitator should put 5 packets of gum in an opaque bag (or container, hat etc). 4 of the 5 packets of gum will be blue indicating a normal season and 1 of the 5 packets will be red indicating a bad season.
+
+
+List of suggested items
+--------------------------
+
+**Documents:**
+
+- 1 of each of the 4 game sheets
+
+- facilitator instructions
+
+- participant instructions
+
+- result sheet
+
+- discussion points
+
+**Supplies:**
+
+- 5 packets of gum - 1 packets of red gum (bad season) and 4 packets of blue gum (normal season)
+
+- opaque bag or container or hat
+
+- dice
+
+- markers
+
+- board or flip chart or larger piece of paper
+
+- pens and/or pencils
+
+
+Game Instructions 
+----------------------
+
+.. figure:: ../images/indexinsurancegame1_en.png
+  :align: center
+  :scale: 50
+
+Game Sheet 1
+~~~~~~~~~~~~~~~~
+
+**Instructions** 
+
+This is the first stage of the game, and should serve as an introduction. Facilitator will discuss the outcomes of each decision. 
+
+**Discussion Questions**
+
+1. What would happen if you chose high quality seeds and it was a bad year? How much would you have earned? 
+
+2. How much would you earn with low quality seeds during a normal year? How much would you earn with high quality seeds during a normal year? What would you prefer and why? 
+
+
+**Key Points**
+
+- There are choices that help increase productivity, but they can be risky to farmers that are making decision under an uncertain climate. 
+
+
+Game Sheet 2
+~~~~~~~~~~~~~~~~
+
+.. figure:: ../images/indexinsurancegame2_en.png
+  :align: center
+  :scale: 33
+
+**Instructions**
+
+This game sheet introduces insurance into the decision process. The concept of index insurance and when it pays out should be carefully explained. 
+
+**Discussion Questions**
+
+1. What are the outcomes if there is a bad year? If there is a normal year? 
+
+2. What can a farmer do so that s/he’s less likely to have a bad outcome?
+ 
+3. When would you buy insurance? Would you buy insurance with high quality or low quality seeds? When would you be glad to have bought insurance?
+
+**Key Points**
+
+- Insurance can help make productive decisions less risky. 
+
+Game Sheet 3
+~~~~~~~~~~~~~~~~
+
+.. figure:: ../images/indexinsurancegame3_en.png
+  :align: center
+  :scale: 33
+  
+**Instructions**
+
+With this game sheet discuss conditions under which the drought index insurance does not pay out: floods, pests, rainfall measurement mistakes, or the index could be focusing on the wrong time of the season. In order for the insurance to pay out the exact terms of the contract must be met. There are two key conditions:
+
+(a) it only pays out when a bad season is caused by drought; and  
+
+(b) it only pays out when low level of rainfall is within the agreed upon contract dates
+
+If we were to consider a 15 year period, there should be 3 years that could be considered a drought period. Two of these years would get payouts, but one of these years would not. Therefore, there is a 1-in-5 chance of a bad year and a 1-in-3 chance that the insurance does not pay out in a bad year, there is technically only a 1-in-15 chance that a farmer will experience a bad year, which does not have a payout. In order to determine if it is a bad season with a payout, a die will be rolled. If the die lands on a 5 or a 6, there is **no payout**. 
+
+**Discussion Questions**
+
+1. Have your decisions regarding the upcoming season changed now that the insurance does not pay every time? If yes, how?
+
+2. What would have happened in a bad year without a payout? Are you worse off now than you were without insurance?   
+
+3. Is it enough to just purchase insurance in order to protect yourself from risk? How can you protect yourself during the years when index insurance fails to protect you? What other risk management strategies could you use? 
+  
+**Key Points**
+
+- Index insurance cannot cover all the risk. There will be some bad seasons that do not merit a payout. 
+
+
+Game Sheet 4
+~~~~~~~~~~~~~~~~ 
+  
+.. figure:: ../images/indexinsurancegame4_en.png
+  :align: center
+  :scale: 33
+  
+
+**Instructions**
+
+This game sheet emphasizes the fact that index insurance is only a part of a risk management toolkit, and that there are other ways for farmers to manage risk. It introduces the idea of a community cooperative that would pay out in years when the insurance does not. 
+
+**Discussion Questions**
+
+
+1. If you participate in the community cooperative would you still do well in a good year? 
+
+2. Would you like to participate in the cooperative if you know that insurance isn’t perfect and does not pay out every time?
+
+3. What would happen this year if the season was bad and there wasn't a payout? How would the cooperative help during this year? Can you think of any other ways you can manage the insurance not paying out? 
+
+
+**Key Points**
+
+- Index insurance can be complimented by other risk management tools 

@@ -1,0 +1,27 @@
+CLIMATE RISK AND APPORTUNITIES
+================================
+
+Topic: Climate Risk and Opportunities 
+------------------------------------- 
+
+Introduction
+~~~~~~~~~~~~
+
+Agricultural productivity in developing countries is blocked by weather related risks that prevent farmers from using fertilizer and high quality seeds. Climate shocks like droughts and floods often lead to food insecurity, debt and the destruction of productive assets, such as plow animals, which can push people into persistent poverty. But even in relatively "good" years, the threat of climate shocks makes people and institutions unable or unwilling to make investments or to take out loans that could help to increase productivity, because a climate shock, such as a drought, could render their investments worthless. As a result, farmers are often unable to reap the full benefits of good years.
+
+In the most basic sense, *climate risk management* efforts are those that try to reduce the impacts that weather and climate extremes can have on lives and livelihoods. For example, insurance can help enhance productivity for farmers in normal years by protecting them from the risks of the worst years, providing a foundation for economic growth. Index insurance is a relatively new tool that farmers can use to help manage risk. Unlike traditional crop insurance, which pays out based on consequences of weather, such as farmer’s crop yields, index insurance pays out based on an index, such as rainfall, which can be measured at a local weather station or by satellite.  Index insurance can be integrated into a broader set of climate risk management and development tools specifically designed as a package to decrease farmers’ vulnerability to weather-related risks, improving lives and livelihoods.
+
+Index Insurance Game
+~~~~~~~~~~~~~~~~~~~~
+
+.. figure:: ../images/indexinsurancegame1_en.png
+  :align: center
+
+.. figure:: ../images/indexinsurancegame2_en.png
+  :align: center
+
+.. figure:: ../images/indexinsurancegame3_en.png
+  :align: center
+
+.. figure:: ../images/indexinsurancegame4_en.png
+  :align: center
